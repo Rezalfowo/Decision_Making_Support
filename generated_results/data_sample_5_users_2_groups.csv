@@ -1,0 +1,6 @@
+User_ID,Group,ActiveEntity,SufficientInformation,SpecificSufficientInformation - have,SpecificSufficientInformation - know,SpecificSufficientInformation - are
+0,1,Human User,Smtg they have,Token,Text-password,Iris
+1,1,Both,Smtg they have,Token,Text-password,Iris
+2,2,Processes,Smtg they are,Assertion,Pattern password,Fingerprint
+3,1,Human User,Smtg they are,Certificate,Passphrase,Iris
+4,1,Human User,Smtg they are,Token,Pattern password,Voice
