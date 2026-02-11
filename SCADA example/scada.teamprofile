@@ -1,0 +1,32 @@
+/**
+ * We only keep the conceptual values for now to reduce complexity but it should be added to the characterization
+ */
+import "scada.humanfactor"
+teamProfile Expert_Authentication gathers { Alice } isCharacterizedBy : SCADA_Property_Library.Skill_Authentication_AC = SCADA_MeasurementsLibrary.Skill.Skill_Scale_5 
+SCADA_Property_Library.Experience_Authentication_AC = SCADA_MeasurementsLibrary.Experience.Experience_Scale_4
+
+teamProfile Expert_Authorization gathers { Alice Bob } isCharacterizedBy :
+SCADA_Property_Library.Skill_Authorization_AC = SCADA_MeasurementsLibrary.Skill.Skill_Scale_4
+SCADA_Property_Library.Experience_Authorization_AC = SCADA_MeasurementsLibrary.Experience.Experience_Scale_5
+
+teamProfile Advanced_Authentication gathers { Bob } isCharacterizedBy :
+SCADA_Property_Library.Skill_Authentication_AC = SCADA_MeasurementsLibrary.Skill.Skill_Scale_4 
+SCADA_Property_Library.Experience_Authentication_AC = SCADA_MeasurementsLibrary.Experience.Experience_Scale_2
+
+teamProfile Advanced_Authorization gathers { David } isCharacterizedBy :
+SCADA_Property_Library.Skill_Authorization_AC = SCADA_MeasurementsLibrary.Skill.Skill_Scale_3
+SCADA_Property_Library.Experience_Authorization_AC = SCADA_MeasurementsLibrary.Experience.Experience_Scale_2
+
+teamProfile Beginner_Authentication gathers { Carlos David } isCharacterizedBy :
+SCADA_Property_Library.Skill_Authentication_AC = SCADA_MeasurementsLibrary.Skill.Skill_Scale_2 
+SCADA_Property_Library.Experience_Authentication_AC = SCADA_MeasurementsLibrary.Experience.Experience_Scale_1
+
+teamProfile Beginner_Authorization gathers { Carlos } isCharacterizedBy :
+SCADA_Property_Library.Skill_Authorization_AC = SCADA_MeasurementsLibrary.Skill.Skill_Scale_1
+SCADA_Property_Library.Experience_Authorization_AC = SCADA_MeasurementsLibrary.Experience.Experience_Scale_1
+
+actor Alice isCharacterizedBy : SCADA_Property_Library.Skill_Authentication_AC = SCADA_MeasurementsLibrary.Skill.Skill_Scale_5
+actor Bob isCharacterizedBy : SCADA_Property_Library.Skill_Authentication_AC = SCADA_MeasurementsLibrary.Skill.Skill_Scale_4
+actor Carlos isCharacterizedBy : SCADA_Property_Library.Skill_Authentication_AC = SCADA_MeasurementsLibrary.Skill.Skill_Scale_2
+actor David isCharacterizedBy : SCADA_Property_Library.Experience_Authorization_AC = SCADA_MeasurementsLibrary.Skill.Skill_Scale_3 SCADA_Property_Library.Experience_Authentication_AC = SCADA_MeasurementsLibrary.Skill.Skill_Scale_2
+ 

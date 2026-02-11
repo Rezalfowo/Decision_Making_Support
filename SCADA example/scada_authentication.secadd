@@ -1,0 +1,6 @@
+import "scada.ciaamps"
+import "scada_authentication.st"
+
+SecurityADD SADDAuthentication refersToAsset Authentication_CentralController 
+alternatives Conceptual_Auth (  Authentication.Abstract_Authenticator)
+Password_Biometric (Authentication.PasswordBasedAuthentication Authentication.BiometricBasedAuthentication)

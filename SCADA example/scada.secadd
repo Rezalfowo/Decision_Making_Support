@@ -1,0 +1,17 @@
+import "scada.humanfactor"
+import "scada.cbse"
+import "scada.ciaamps"
+import "scada_authentication.secadd"
+import "scada_authorization.secadd"
+import "scada.teamprofile"
+
+Project SCADA hasTP  Advanced_Authentication Advanced_Authorization Beginner_Authentication Beginner_Authorization Expert_Authentication Expert_Authorization{ 
+	CategoryAuthenticationActiveComponent CategoryAuthorizationActiveComponent
+	
+}
+Category CategoryAuthenticationActiveComponent {
+	SADDAuthentication 
+}
+Category CategoryAuthorizationActiveComponent {
+	SADDAuthorization
+}
