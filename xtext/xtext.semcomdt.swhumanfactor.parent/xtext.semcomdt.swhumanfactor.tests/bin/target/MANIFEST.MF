@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: xtext.semcomdt.swhumanfactor.tests
+Bundle-ManifestVersion: 2
+Bundle-Name: xtext.semcomdt.swhumanfactor.tests
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.202602131033
+Bundle-SymbolicName: xtext.semcomdt.swhumanfactor.tests; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: xtext.semcomdt.swhumanfactor,org.eclipse.xtext.testing,o
+ rg.eclipse.xtext.xbase.testing,org.eclipse.xtext.xbase.lib;bundle-versi
+ on="2.35.0"
+Import-Package: org.junit.jupiter.api;version="[5.1.0,6.0.0)",org.junit.
+ jupiter.api.extension;version="[5.1.0,6.0.0)"
+Export-Package: xtext.semcomdt.swhumanfactor.tests;x-internal=true
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=21))"
+

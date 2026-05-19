@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="decisionmaking" nsURI="http://www.swsecurity.semcomdt/Decisionmaking"
+    nsPrefix="decisionmaking">
+  <eClassifiers xsi:type="ecore:EClass" name="GroupDecisionSession">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="imports" upperBound="-1"
+        eType="#//Import" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="concept" eType="#//LibDesRun"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LibDesRun">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="library" eType="#//Library"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="designtime" eType="#//DesignTime"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="runtime" eType="#//RunTime"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Import">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="importURI" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Library">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="decisionrules" upperBound="-1"
+        eType="#//DecisionRule" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="algorithms" upperBound="-1"
+        eType="#//Algorithm" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="strategies" upperBound="-1"
+        eType="#//StrategyPredefined" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Strategy" eSuperTypes="#//Strat">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rules" upperBound="-1"
+        eType="#//Rule" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StrategyPredefined">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rules" upperBound="-1"
+        eType="#//PredefinedRule" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Rule"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PredefinedRule"/>
+  <eClassifiers xsi:type="ecore:EClass" name="StrategyDecisionRule" eSuperTypes="#//Rule">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="decisionrule" eType="#//DecisionRule"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="teamprofiles" unique="false"
+        upperBound="-1" eType="ecore:EClass platform:/resource/semcomdt.swhumanfactor.teamprofile/model/generated/Teamprofile.ecore#//Profile"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PredefinedDecisionRule" eSuperTypes="#//PredefinedRule">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="decisionrule" eType="#//DecisionRule"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StrategyAlgorithm" eSuperTypes="#//Rule #//PredefinedRule">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="algorithm" eType="#//Algorithm"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DecisionRule">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="solutionselectionaccepted"
+        unique="false" upperBound="-1" eType="#//SolutionSelectionKind"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Algorithm">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="solutionselectionaccepted"
+        unique="false" upperBound="-1" eType="#//SolutionSelectionKind"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="considersTP" eType="#//BOOLEAN"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DesignTime">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="decisionsupport" eType="#//DecisionSupport"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DecisionSupport">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="makedecisionfor" unique="false"
+        upperBound="-1" eType="ecore:EClass platform:/resource/semcomdt.swsecurity.securityadd/model/generated/Securityadd.ecore#//Category"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="strat" upperBound="-1"
+        eType="#//Strat" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Strat">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="strat" eType="#//StrategyPredefined"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="solutionSelectedChosen"
+        eType="#//SolutionSelectionKind"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="teamprofiles" unique="false"
+        upperBound="-1" eType="ecore:EClass platform:/resource/semcomdt.swhumanfactor.teamprofile/model/generated/Teamprofile.ecore#//Profile"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RunTime">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="decisionsupport" eType="#//DecisionSupport"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="category" eType="ecore:EClass platform:/resource/semcomdt.swsecurity.securityadd/model/generated/Securityadd.ecore#//Category"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="saddresult" upperBound="-1"
+        eType="#//SADDResult" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SADDResult">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sadd" eType="ecore:EClass platform:/resource/semcomdt.swsecurity.securityadd/model/generated/Securityadd.ecore#//SecurityADD"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="altpreferences" upperBound="-1"
+        eType="#//AlternativePreference" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AlternativePreference">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="alternative" eType="ecore:EClass platform:/resource/semcomdt.swsecurity.securityadd/model/generated/Securityadd.ecore#//Alternative"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="preferences" upperBound="-1"
+        eType="#//Preference" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Preference">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="actor" eType="ecore:EClass platform:/resource/semcomdt.swhumanfactor.teamprofile/model/generated/Teamprofile.ecore#//Actor"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rationale" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="SolutionSelectionKind">
+    <eLiterals name="ranking" literal="Ranking"/>
+    <eLiterals name="rating" value="1" literal="Rating"/>
+    <eLiterals name="yesno" value="2" literal="YesNo"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="BOOLEAN">
+    <eLiterals name="no" literal="no"/>
+    <eLiterals name="yes" value="1" literal="yes"/>
+  </eClassifiers>
+</ecore:EPackage>

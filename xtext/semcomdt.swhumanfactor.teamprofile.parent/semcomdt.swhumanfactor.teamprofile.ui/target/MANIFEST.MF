@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: semcomdt.swhumanfactor.teamprofile.ui
+Bundle-ManifestVersion: 2
+Bundle-Name: semcomdt.swhumanfactor.teamprofile.ui
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.202605191325
+Bundle-SymbolicName: semcomdt.swhumanfactor.teamprofile.ui; singleton:=t
+ rue
+Bundle-ActivationPolicy: lazy
+Require-Bundle: semcomdt.swhumanfactor.teamprofile,semcomdt.swhumanfacto
+ r.teamprofile.ide,org.eclipse.xtext.ui,org.eclipse.xtext.ui.shared,org.
+ eclipse.xtext.ui.codetemplates.ui,org.eclipse.ui.editors;bundle-version
+ ="3.14.300",org.eclipse.ui.ide;bundle-version="3.18.500",org.eclipse.ui
+ ,org.eclipse.compare,org.eclipse.xtext.builder
+Import-Package: org.apache.log4j
+Export-Package: semcomdt.swhumanfactor.ui.quickfix,semcomdt.swhumanfacto
+ r.ui.contentassist,semcomdt.swhumanfactor.teamprofile.ui.internal
+Bundle-Activator: semcomdt.swhumanfactor.teamprofile.ui.internal.Teampro
+ fileActivator
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=21))"
+
