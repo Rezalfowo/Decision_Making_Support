@@ -1,0 +1,32 @@
+grammar xtext.Teamprofile with org.eclipse.xtext.common.Terminals
+
+generate teamprofile "http://www.Teamprofile.xtext"
+
+Profiling:
+	imports+=Import*
+	actors+=Actor*
+	profiles+=Profile*
+;
+
+Import:
+	'import' importURI=STRING
+;
+
+Actor:
+	"Actor" name=ID ":" attributes+=Attribute+
+;
+Profile:
+	name=ID
+	("gathers" "{" actors+=[Actor]* "}")*
+	"characterizedBy" "{" attributes+=Attribute+ "}"
+	;
+
+Attribute :
+	  hfproperty=STRING "="  hfmeasurementvalue=ValueKind 
+;
+ValueKind:
+	INT | STRING
+;
+QualifiedName:
+	ID ('.' ID)*
+;

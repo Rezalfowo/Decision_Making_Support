@@ -1,0 +1,5 @@
+
+SecurityADD SADDAuthentication alternatives {
+- Conceptual_Auth ("Abstract_Authenticator")
+- Password_Biometric ("PasswordBasedAuthentication" "BiometricBasedAuthentication")
+}

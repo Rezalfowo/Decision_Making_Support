@@ -1,9 +1,0 @@
-import "scada.ciaamps"
-import "scada_authorization.st"
-
-SecurityADD SADDAuthorization refersToAsset AuthorizationCentralController 
-	alternatives Conceptual_Authorization (  Authorization.Authorization)
-	RBAC (Authorization.RoleBasedAccessControl)
-	ABAC (Authorization.AttributeBasedAccessControl)
-	RBAC_ABAC (Authorization.AttributeBasedAccessControl Authorization.RoleBasedAccessControl)
-
