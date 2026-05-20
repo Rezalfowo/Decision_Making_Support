@@ -4,7 +4,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="GroupDecisionSession">
     <eStructuralFeatures xsi:type="ecore:EReference" name="imports" upperBound="-1"
         eType="#//Import" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="concept" eType="#//LibDesRun"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="decisionSupport" eType="#//LibDesRun"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LibDesRun">
@@ -29,6 +29,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Strategy" eSuperTypes="#//Strat">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="preferenceIndication" eType="#//PreferenceIndicationKind"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="rules" upperBound="-1"
         eType="#//Rule" containment="true"/>
   </eClassifiers>
@@ -52,14 +53,14 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DecisionRule">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="solutionselectionaccepted"
-        unique="false" upperBound="-1" eType="#//SolutionSelectionKind"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="prefIndAccepted" unique="false"
+        upperBound="-1" eType="#//PreferenceIndicationKind"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Algorithm">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="solutionselectionaccepted"
-        unique="false" upperBound="-1" eType="#//SolutionSelectionKind"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="prefIndAccepted" unique="false"
+        upperBound="-1" eType="#//PreferenceIndicationKind"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="considersTP" eType="#//BOOLEAN"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
@@ -77,7 +78,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Strat">
     <eStructuralFeatures xsi:type="ecore:EReference" name="strat" eType="#//StrategyPredefined"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="solutionSelectedChosen"
-        eType="#//SolutionSelectionKind"/>
+        eType="#//PreferenceIndicationKind"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="teamprofiles" unique="false"
         upperBound="-1" eType="ecore:EClass platform:/resource/teamprofile/model/generated/Teamprofile.ecore#//Profile"/>
   </eClassifiers>
@@ -102,7 +103,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="rationale" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="SolutionSelectionKind">
+  <eClassifiers xsi:type="ecore:EEnum" name="PreferenceIndicationKind">
     <eLiterals name="ranking" literal="Ranking"/>
     <eLiterals name="rating" value="1" literal="Rating"/>
     <eLiterals name="yesno" value="2" literal="YesNo"/>

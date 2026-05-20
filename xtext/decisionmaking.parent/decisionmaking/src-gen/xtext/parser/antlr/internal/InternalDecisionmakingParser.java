@@ -135,24 +135,24 @@ public class InternalDecisionmakingParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGroupDecisionSession"
-    // InternalDecisionmaking.g:72:1: ruleGroupDecisionSession returns [EObject current=null] : ( ( (lv_imports_0_0= ruleImport ) )* ( (lv_concept_1_0= ruleLibDesRun ) ) ) ;
+    // InternalDecisionmaking.g:72:1: ruleGroupDecisionSession returns [EObject current=null] : ( ( (lv_imports_0_0= ruleImport ) )* ( (lv_decisionSupport_1_0= ruleLibDesRun ) ) ) ;
     public final EObject ruleGroupDecisionSession() throws RecognitionException {
         EObject current = null;
 
         EObject lv_imports_0_0 = null;
 
-        EObject lv_concept_1_0 = null;
+        EObject lv_decisionSupport_1_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalDecisionmaking.g:78:2: ( ( ( (lv_imports_0_0= ruleImport ) )* ( (lv_concept_1_0= ruleLibDesRun ) ) ) )
-            // InternalDecisionmaking.g:79:2: ( ( (lv_imports_0_0= ruleImport ) )* ( (lv_concept_1_0= ruleLibDesRun ) ) )
+            // InternalDecisionmaking.g:78:2: ( ( ( (lv_imports_0_0= ruleImport ) )* ( (lv_decisionSupport_1_0= ruleLibDesRun ) ) ) )
+            // InternalDecisionmaking.g:79:2: ( ( (lv_imports_0_0= ruleImport ) )* ( (lv_decisionSupport_1_0= ruleLibDesRun ) ) )
             {
-            // InternalDecisionmaking.g:79:2: ( ( (lv_imports_0_0= ruleImport ) )* ( (lv_concept_1_0= ruleLibDesRun ) ) )
-            // InternalDecisionmaking.g:80:3: ( (lv_imports_0_0= ruleImport ) )* ( (lv_concept_1_0= ruleLibDesRun ) )
+            // InternalDecisionmaking.g:79:2: ( ( (lv_imports_0_0= ruleImport ) )* ( (lv_decisionSupport_1_0= ruleLibDesRun ) ) )
+            // InternalDecisionmaking.g:80:3: ( (lv_imports_0_0= ruleImport ) )* ( (lv_decisionSupport_1_0= ruleLibDesRun ) )
             {
             // InternalDecisionmaking.g:80:3: ( (lv_imports_0_0= ruleImport ) )*
             loop1:
@@ -203,17 +203,17 @@ public class InternalDecisionmakingParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // InternalDecisionmaking.g:99:3: ( (lv_concept_1_0= ruleLibDesRun ) )
-            // InternalDecisionmaking.g:100:4: (lv_concept_1_0= ruleLibDesRun )
+            // InternalDecisionmaking.g:99:3: ( (lv_decisionSupport_1_0= ruleLibDesRun ) )
+            // InternalDecisionmaking.g:100:4: (lv_decisionSupport_1_0= ruleLibDesRun )
             {
-            // InternalDecisionmaking.g:100:4: (lv_concept_1_0= ruleLibDesRun )
-            // InternalDecisionmaking.g:101:5: lv_concept_1_0= ruleLibDesRun
+            // InternalDecisionmaking.g:100:4: (lv_decisionSupport_1_0= ruleLibDesRun )
+            // InternalDecisionmaking.g:101:5: lv_decisionSupport_1_0= ruleLibDesRun
             {
 
-            					newCompositeNode(grammarAccess.getGroupDecisionSessionAccess().getConceptLibDesRunParserRuleCall_1_0());
+            					newCompositeNode(grammarAccess.getGroupDecisionSessionAccess().getDecisionSupportLibDesRunParserRuleCall_1_0());
             				
             pushFollow(FOLLOW_2);
-            lv_concept_1_0=ruleLibDesRun();
+            lv_decisionSupport_1_0=ruleLibDesRun();
 
             state._fsp--;
 
@@ -223,8 +223,8 @@ public class InternalDecisionmakingParser extends AbstractInternalAntlrParser {
             					}
             					set(
             						current,
-            						"concept",
-            						lv_concept_1_0,
+            						"decisionSupport",
+            						lv_decisionSupport_1_0,
             						"xtext.Decisionmaking.LibDesRun");
             					afterParserOrEnumRuleCall();
             				
@@ -1060,7 +1060,7 @@ public class InternalDecisionmakingParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleStrategy"
-    // InternalDecisionmaking.g:388:1: ruleStrategy returns [EObject current=null] : (otherlv_0= 'Strategy' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'withPreferenceIndication' ( (lv_solutionSelectedChosen_3_0= ruleSolutionSelectionKind ) ) otherlv_4= '{' ( (lv_rules_5_0= ruleRule ) )* (otherlv_6= 'then' ( (lv_rules_7_0= ruleRule ) )* )* otherlv_8= '}' ) ;
+    // InternalDecisionmaking.g:388:1: ruleStrategy returns [EObject current=null] : (otherlv_0= 'Strategy' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'withPreferenceIndication' ( (lv_preferenceIndication_3_0= rulePreferenceIndicationKind ) ) otherlv_4= '{' ( (lv_rules_5_0= ruleRule ) )* (otherlv_6= 'then' ( (lv_rules_7_0= ruleRule ) )* )* otherlv_8= '}' ) ;
     public final EObject ruleStrategy() throws RecognitionException {
         EObject current = null;
 
@@ -1070,7 +1070,7 @@ public class InternalDecisionmakingParser extends AbstractInternalAntlrParser {
         Token otherlv_4=null;
         Token otherlv_6=null;
         Token otherlv_8=null;
-        Enumerator lv_solutionSelectedChosen_3_0 = null;
+        Enumerator lv_preferenceIndication_3_0 = null;
 
         EObject lv_rules_5_0 = null;
 
@@ -1081,11 +1081,11 @@ public class InternalDecisionmakingParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalDecisionmaking.g:394:2: ( (otherlv_0= 'Strategy' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'withPreferenceIndication' ( (lv_solutionSelectedChosen_3_0= ruleSolutionSelectionKind ) ) otherlv_4= '{' ( (lv_rules_5_0= ruleRule ) )* (otherlv_6= 'then' ( (lv_rules_7_0= ruleRule ) )* )* otherlv_8= '}' ) )
-            // InternalDecisionmaking.g:395:2: (otherlv_0= 'Strategy' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'withPreferenceIndication' ( (lv_solutionSelectedChosen_3_0= ruleSolutionSelectionKind ) ) otherlv_4= '{' ( (lv_rules_5_0= ruleRule ) )* (otherlv_6= 'then' ( (lv_rules_7_0= ruleRule ) )* )* otherlv_8= '}' )
+            // InternalDecisionmaking.g:394:2: ( (otherlv_0= 'Strategy' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'withPreferenceIndication' ( (lv_preferenceIndication_3_0= rulePreferenceIndicationKind ) ) otherlv_4= '{' ( (lv_rules_5_0= ruleRule ) )* (otherlv_6= 'then' ( (lv_rules_7_0= ruleRule ) )* )* otherlv_8= '}' ) )
+            // InternalDecisionmaking.g:395:2: (otherlv_0= 'Strategy' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'withPreferenceIndication' ( (lv_preferenceIndication_3_0= rulePreferenceIndicationKind ) ) otherlv_4= '{' ( (lv_rules_5_0= ruleRule ) )* (otherlv_6= 'then' ( (lv_rules_7_0= ruleRule ) )* )* otherlv_8= '}' )
             {
-            // InternalDecisionmaking.g:395:2: (otherlv_0= 'Strategy' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'withPreferenceIndication' ( (lv_solutionSelectedChosen_3_0= ruleSolutionSelectionKind ) ) otherlv_4= '{' ( (lv_rules_5_0= ruleRule ) )* (otherlv_6= 'then' ( (lv_rules_7_0= ruleRule ) )* )* otherlv_8= '}' )
-            // InternalDecisionmaking.g:396:3: otherlv_0= 'Strategy' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'withPreferenceIndication' ( (lv_solutionSelectedChosen_3_0= ruleSolutionSelectionKind ) ) otherlv_4= '{' ( (lv_rules_5_0= ruleRule ) )* (otherlv_6= 'then' ( (lv_rules_7_0= ruleRule ) )* )* otherlv_8= '}'
+            // InternalDecisionmaking.g:395:2: (otherlv_0= 'Strategy' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'withPreferenceIndication' ( (lv_preferenceIndication_3_0= rulePreferenceIndicationKind ) ) otherlv_4= '{' ( (lv_rules_5_0= ruleRule ) )* (otherlv_6= 'then' ( (lv_rules_7_0= ruleRule ) )* )* otherlv_8= '}' )
+            // InternalDecisionmaking.g:396:3: otherlv_0= 'Strategy' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'withPreferenceIndication' ( (lv_preferenceIndication_3_0= rulePreferenceIndicationKind ) ) otherlv_4= '{' ( (lv_rules_5_0= ruleRule ) )* (otherlv_6= 'then' ( (lv_rules_7_0= ruleRule ) )* )* otherlv_8= '}'
             {
             otherlv_0=(Token)match(input,13,FOLLOW_5); 
 
@@ -1121,17 +1121,17 @@ public class InternalDecisionmakingParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_2, grammarAccess.getStrategyAccess().getWithPreferenceIndicationKeyword_2());
             		
-            // InternalDecisionmaking.g:422:3: ( (lv_solutionSelectedChosen_3_0= ruleSolutionSelectionKind ) )
-            // InternalDecisionmaking.g:423:4: (lv_solutionSelectedChosen_3_0= ruleSolutionSelectionKind )
+            // InternalDecisionmaking.g:422:3: ( (lv_preferenceIndication_3_0= rulePreferenceIndicationKind ) )
+            // InternalDecisionmaking.g:423:4: (lv_preferenceIndication_3_0= rulePreferenceIndicationKind )
             {
-            // InternalDecisionmaking.g:423:4: (lv_solutionSelectedChosen_3_0= ruleSolutionSelectionKind )
-            // InternalDecisionmaking.g:424:5: lv_solutionSelectedChosen_3_0= ruleSolutionSelectionKind
+            // InternalDecisionmaking.g:423:4: (lv_preferenceIndication_3_0= rulePreferenceIndicationKind )
+            // InternalDecisionmaking.g:424:5: lv_preferenceIndication_3_0= rulePreferenceIndicationKind
             {
 
-            					newCompositeNode(grammarAccess.getStrategyAccess().getSolutionSelectedChosenSolutionSelectionKindEnumRuleCall_3_0());
+            					newCompositeNode(grammarAccess.getStrategyAccess().getPreferenceIndicationPreferenceIndicationKindEnumRuleCall_3_0());
             				
             pushFollow(FOLLOW_10);
-            lv_solutionSelectedChosen_3_0=ruleSolutionSelectionKind();
+            lv_preferenceIndication_3_0=rulePreferenceIndicationKind();
 
             state._fsp--;
 
@@ -1141,9 +1141,9 @@ public class InternalDecisionmakingParser extends AbstractInternalAntlrParser {
             					}
             					set(
             						current,
-            						"solutionSelectedChosen",
-            						lv_solutionSelectedChosen_3_0,
-            						"xtext.Decisionmaking.SolutionSelectionKind");
+            						"preferenceIndication",
+            						lv_preferenceIndication_3_0,
+            						"xtext.Decisionmaking.PreferenceIndicationKind");
             					afterParserOrEnumRuleCall();
             				
 
@@ -2225,7 +2225,7 @@ public class InternalDecisionmakingParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDecisionRule"
-    // InternalDecisionmaking.g:806:1: ruleDecisionRule returns [EObject current=null] : (otherlv_0= 'decisionrule' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '(' ( (lv_solutionselectionaccepted_3_0= ruleSolutionSelectionKind ) )* otherlv_4= ')' ( (lv_description_5_0= RULE_STRING ) ) ) ;
+    // InternalDecisionmaking.g:806:1: ruleDecisionRule returns [EObject current=null] : (otherlv_0= 'decisionrule' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '(' ( (lv_prefIndAccepted_3_0= rulePreferenceIndicationKind ) )* otherlv_4= ')' ( (lv_description_5_0= RULE_STRING ) ) ) ;
     public final EObject ruleDecisionRule() throws RecognitionException {
         EObject current = null;
 
@@ -2234,18 +2234,18 @@ public class InternalDecisionmakingParser extends AbstractInternalAntlrParser {
         Token otherlv_2=null;
         Token otherlv_4=null;
         Token lv_description_5_0=null;
-        Enumerator lv_solutionselectionaccepted_3_0 = null;
+        Enumerator lv_prefIndAccepted_3_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalDecisionmaking.g:812:2: ( (otherlv_0= 'decisionrule' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '(' ( (lv_solutionselectionaccepted_3_0= ruleSolutionSelectionKind ) )* otherlv_4= ')' ( (lv_description_5_0= RULE_STRING ) ) ) )
-            // InternalDecisionmaking.g:813:2: (otherlv_0= 'decisionrule' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '(' ( (lv_solutionselectionaccepted_3_0= ruleSolutionSelectionKind ) )* otherlv_4= ')' ( (lv_description_5_0= RULE_STRING ) ) )
+            // InternalDecisionmaking.g:812:2: ( (otherlv_0= 'decisionrule' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '(' ( (lv_prefIndAccepted_3_0= rulePreferenceIndicationKind ) )* otherlv_4= ')' ( (lv_description_5_0= RULE_STRING ) ) ) )
+            // InternalDecisionmaking.g:813:2: (otherlv_0= 'decisionrule' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '(' ( (lv_prefIndAccepted_3_0= rulePreferenceIndicationKind ) )* otherlv_4= ')' ( (lv_description_5_0= RULE_STRING ) ) )
             {
-            // InternalDecisionmaking.g:813:2: (otherlv_0= 'decisionrule' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '(' ( (lv_solutionselectionaccepted_3_0= ruleSolutionSelectionKind ) )* otherlv_4= ')' ( (lv_description_5_0= RULE_STRING ) ) )
-            // InternalDecisionmaking.g:814:3: otherlv_0= 'decisionrule' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '(' ( (lv_solutionselectionaccepted_3_0= ruleSolutionSelectionKind ) )* otherlv_4= ')' ( (lv_description_5_0= RULE_STRING ) )
+            // InternalDecisionmaking.g:813:2: (otherlv_0= 'decisionrule' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '(' ( (lv_prefIndAccepted_3_0= rulePreferenceIndicationKind ) )* otherlv_4= ')' ( (lv_description_5_0= RULE_STRING ) ) )
+            // InternalDecisionmaking.g:814:3: otherlv_0= 'decisionrule' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '(' ( (lv_prefIndAccepted_3_0= rulePreferenceIndicationKind ) )* otherlv_4= ')' ( (lv_description_5_0= RULE_STRING ) )
             {
             otherlv_0=(Token)match(input,18,FOLLOW_5); 
 
@@ -2281,7 +2281,7 @@ public class InternalDecisionmakingParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_2, grammarAccess.getDecisionRuleAccess().getLeftParenthesisKeyword_2());
             		
-            // InternalDecisionmaking.g:840:3: ( (lv_solutionselectionaccepted_3_0= ruleSolutionSelectionKind ) )*
+            // InternalDecisionmaking.g:840:3: ( (lv_prefIndAccepted_3_0= rulePreferenceIndicationKind ) )*
             loop16:
             do {
                 int alt16=2;
@@ -2294,16 +2294,16 @@ public class InternalDecisionmakingParser extends AbstractInternalAntlrParser {
 
                 switch (alt16) {
             	case 1 :
-            	    // InternalDecisionmaking.g:841:4: (lv_solutionselectionaccepted_3_0= ruleSolutionSelectionKind )
+            	    // InternalDecisionmaking.g:841:4: (lv_prefIndAccepted_3_0= rulePreferenceIndicationKind )
             	    {
-            	    // InternalDecisionmaking.g:841:4: (lv_solutionselectionaccepted_3_0= ruleSolutionSelectionKind )
-            	    // InternalDecisionmaking.g:842:5: lv_solutionselectionaccepted_3_0= ruleSolutionSelectionKind
+            	    // InternalDecisionmaking.g:841:4: (lv_prefIndAccepted_3_0= rulePreferenceIndicationKind )
+            	    // InternalDecisionmaking.g:842:5: lv_prefIndAccepted_3_0= rulePreferenceIndicationKind
             	    {
 
-            	    					newCompositeNode(grammarAccess.getDecisionRuleAccess().getSolutionselectionacceptedSolutionSelectionKindEnumRuleCall_3_0());
+            	    					newCompositeNode(grammarAccess.getDecisionRuleAccess().getPrefIndAcceptedPreferenceIndicationKindEnumRuleCall_3_0());
             	    				
             	    pushFollow(FOLLOW_15);
-            	    lv_solutionselectionaccepted_3_0=ruleSolutionSelectionKind();
+            	    lv_prefIndAccepted_3_0=rulePreferenceIndicationKind();
 
             	    state._fsp--;
 
@@ -2313,9 +2313,9 @@ public class InternalDecisionmakingParser extends AbstractInternalAntlrParser {
             	    					}
             	    					add(
             	    						current,
-            	    						"solutionselectionaccepted",
-            	    						lv_solutionselectionaccepted_3_0,
-            	    						"xtext.Decisionmaking.SolutionSelectionKind");
+            	    						"prefIndAccepted",
+            	    						lv_prefIndAccepted_3_0,
+            	    						"xtext.Decisionmaking.PreferenceIndicationKind");
             	    					afterParserOrEnumRuleCall();
             	    				
 
@@ -2419,7 +2419,7 @@ public class InternalDecisionmakingParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAlgorithm"
-    // InternalDecisionmaking.g:892:1: ruleAlgorithm returns [EObject current=null] : (otherlv_0= 'algorithm' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '(' ( (lv_solutionselectionaccepted_3_0= ruleSolutionSelectionKind ) )* otherlv_4= ')' otherlv_5= 'considersTP' ( (lv_considersTP_6_0= ruleBOOLEAN ) ) ( (lv_description_7_0= RULE_STRING ) ) ) ;
+    // InternalDecisionmaking.g:892:1: ruleAlgorithm returns [EObject current=null] : (otherlv_0= 'algorithm' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '(' ( (lv_prefIndAccepted_3_0= rulePreferenceIndicationKind ) )* otherlv_4= ')' otherlv_5= 'considersTP' ( (lv_considersTP_6_0= ruleBOOLEAN ) ) ( (lv_description_7_0= RULE_STRING ) ) ) ;
     public final EObject ruleAlgorithm() throws RecognitionException {
         EObject current = null;
 
@@ -2429,7 +2429,7 @@ public class InternalDecisionmakingParser extends AbstractInternalAntlrParser {
         Token otherlv_4=null;
         Token otherlv_5=null;
         Token lv_description_7_0=null;
-        Enumerator lv_solutionselectionaccepted_3_0 = null;
+        Enumerator lv_prefIndAccepted_3_0 = null;
 
         Enumerator lv_considersTP_6_0 = null;
 
@@ -2438,11 +2438,11 @@ public class InternalDecisionmakingParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalDecisionmaking.g:898:2: ( (otherlv_0= 'algorithm' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '(' ( (lv_solutionselectionaccepted_3_0= ruleSolutionSelectionKind ) )* otherlv_4= ')' otherlv_5= 'considersTP' ( (lv_considersTP_6_0= ruleBOOLEAN ) ) ( (lv_description_7_0= RULE_STRING ) ) ) )
-            // InternalDecisionmaking.g:899:2: (otherlv_0= 'algorithm' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '(' ( (lv_solutionselectionaccepted_3_0= ruleSolutionSelectionKind ) )* otherlv_4= ')' otherlv_5= 'considersTP' ( (lv_considersTP_6_0= ruleBOOLEAN ) ) ( (lv_description_7_0= RULE_STRING ) ) )
+            // InternalDecisionmaking.g:898:2: ( (otherlv_0= 'algorithm' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '(' ( (lv_prefIndAccepted_3_0= rulePreferenceIndicationKind ) )* otherlv_4= ')' otherlv_5= 'considersTP' ( (lv_considersTP_6_0= ruleBOOLEAN ) ) ( (lv_description_7_0= RULE_STRING ) ) ) )
+            // InternalDecisionmaking.g:899:2: (otherlv_0= 'algorithm' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '(' ( (lv_prefIndAccepted_3_0= rulePreferenceIndicationKind ) )* otherlv_4= ')' otherlv_5= 'considersTP' ( (lv_considersTP_6_0= ruleBOOLEAN ) ) ( (lv_description_7_0= RULE_STRING ) ) )
             {
-            // InternalDecisionmaking.g:899:2: (otherlv_0= 'algorithm' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '(' ( (lv_solutionselectionaccepted_3_0= ruleSolutionSelectionKind ) )* otherlv_4= ')' otherlv_5= 'considersTP' ( (lv_considersTP_6_0= ruleBOOLEAN ) ) ( (lv_description_7_0= RULE_STRING ) ) )
-            // InternalDecisionmaking.g:900:3: otherlv_0= 'algorithm' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '(' ( (lv_solutionselectionaccepted_3_0= ruleSolutionSelectionKind ) )* otherlv_4= ')' otherlv_5= 'considersTP' ( (lv_considersTP_6_0= ruleBOOLEAN ) ) ( (lv_description_7_0= RULE_STRING ) )
+            // InternalDecisionmaking.g:899:2: (otherlv_0= 'algorithm' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '(' ( (lv_prefIndAccepted_3_0= rulePreferenceIndicationKind ) )* otherlv_4= ')' otherlv_5= 'considersTP' ( (lv_considersTP_6_0= ruleBOOLEAN ) ) ( (lv_description_7_0= RULE_STRING ) ) )
+            // InternalDecisionmaking.g:900:3: otherlv_0= 'algorithm' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '(' ( (lv_prefIndAccepted_3_0= rulePreferenceIndicationKind ) )* otherlv_4= ')' otherlv_5= 'considersTP' ( (lv_considersTP_6_0= ruleBOOLEAN ) ) ( (lv_description_7_0= RULE_STRING ) )
             {
             otherlv_0=(Token)match(input,20,FOLLOW_5); 
 
@@ -2478,7 +2478,7 @@ public class InternalDecisionmakingParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_2, grammarAccess.getAlgorithmAccess().getLeftParenthesisKeyword_2());
             		
-            // InternalDecisionmaking.g:926:3: ( (lv_solutionselectionaccepted_3_0= ruleSolutionSelectionKind ) )*
+            // InternalDecisionmaking.g:926:3: ( (lv_prefIndAccepted_3_0= rulePreferenceIndicationKind ) )*
             loop17:
             do {
                 int alt17=2;
@@ -2491,16 +2491,16 @@ public class InternalDecisionmakingParser extends AbstractInternalAntlrParser {
 
                 switch (alt17) {
             	case 1 :
-            	    // InternalDecisionmaking.g:927:4: (lv_solutionselectionaccepted_3_0= ruleSolutionSelectionKind )
+            	    // InternalDecisionmaking.g:927:4: (lv_prefIndAccepted_3_0= rulePreferenceIndicationKind )
             	    {
-            	    // InternalDecisionmaking.g:927:4: (lv_solutionselectionaccepted_3_0= ruleSolutionSelectionKind )
-            	    // InternalDecisionmaking.g:928:5: lv_solutionselectionaccepted_3_0= ruleSolutionSelectionKind
+            	    // InternalDecisionmaking.g:927:4: (lv_prefIndAccepted_3_0= rulePreferenceIndicationKind )
+            	    // InternalDecisionmaking.g:928:5: lv_prefIndAccepted_3_0= rulePreferenceIndicationKind
             	    {
 
-            	    					newCompositeNode(grammarAccess.getAlgorithmAccess().getSolutionselectionacceptedSolutionSelectionKindEnumRuleCall_3_0());
+            	    					newCompositeNode(grammarAccess.getAlgorithmAccess().getPrefIndAcceptedPreferenceIndicationKindEnumRuleCall_3_0());
             	    				
             	    pushFollow(FOLLOW_15);
-            	    lv_solutionselectionaccepted_3_0=ruleSolutionSelectionKind();
+            	    lv_prefIndAccepted_3_0=rulePreferenceIndicationKind();
 
             	    state._fsp--;
 
@@ -2510,9 +2510,9 @@ public class InternalDecisionmakingParser extends AbstractInternalAntlrParser {
             	    					}
             	    					add(
             	    						current,
-            	    						"solutionselectionaccepted",
-            	    						lv_solutionselectionaccepted_3_0,
-            	    						"xtext.Decisionmaking.SolutionSelectionKind");
+            	    						"prefIndAccepted",
+            	    						lv_prefIndAccepted_3_0,
+            	    						"xtext.Decisionmaking.PreferenceIndicationKind");
             	    					afterParserOrEnumRuleCall();
             	    				
 
@@ -2996,7 +2996,7 @@ public class InternalDecisionmakingParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleStrat"
-    // InternalDecisionmaking.g:1139:1: ruleStrat returns [EObject current=null] : (this_Strategy_0= ruleStrategy | (otherlv_1= 'Strategy' ( ( ruleQualifiedName ) ) otherlv_3= 'withPreferenceIndication' ( (lv_solutionSelectedChosen_4_0= ruleSolutionSelectionKind ) ) (otherlv_5= 'for' ( ( ruleQualifiedName ) )+ )? ) ) ;
+    // InternalDecisionmaking.g:1139:1: ruleStrat returns [EObject current=null] : (this_Strategy_0= ruleStrategy | (otherlv_1= 'Strategy' ( ( ruleQualifiedName ) ) otherlv_3= 'withPreferenceIndication' ( (lv_solutionSelectedChosen_4_0= rulePreferenceIndicationKind ) ) (otherlv_5= 'for' ( ( ruleQualifiedName ) )+ )? ) ) ;
     public final EObject ruleStrat() throws RecognitionException {
         EObject current = null;
 
@@ -3012,10 +3012,10 @@ public class InternalDecisionmakingParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalDecisionmaking.g:1145:2: ( (this_Strategy_0= ruleStrategy | (otherlv_1= 'Strategy' ( ( ruleQualifiedName ) ) otherlv_3= 'withPreferenceIndication' ( (lv_solutionSelectedChosen_4_0= ruleSolutionSelectionKind ) ) (otherlv_5= 'for' ( ( ruleQualifiedName ) )+ )? ) ) )
-            // InternalDecisionmaking.g:1146:2: (this_Strategy_0= ruleStrategy | (otherlv_1= 'Strategy' ( ( ruleQualifiedName ) ) otherlv_3= 'withPreferenceIndication' ( (lv_solutionSelectedChosen_4_0= ruleSolutionSelectionKind ) ) (otherlv_5= 'for' ( ( ruleQualifiedName ) )+ )? ) )
+            // InternalDecisionmaking.g:1145:2: ( (this_Strategy_0= ruleStrategy | (otherlv_1= 'Strategy' ( ( ruleQualifiedName ) ) otherlv_3= 'withPreferenceIndication' ( (lv_solutionSelectedChosen_4_0= rulePreferenceIndicationKind ) ) (otherlv_5= 'for' ( ( ruleQualifiedName ) )+ )? ) ) )
+            // InternalDecisionmaking.g:1146:2: (this_Strategy_0= ruleStrategy | (otherlv_1= 'Strategy' ( ( ruleQualifiedName ) ) otherlv_3= 'withPreferenceIndication' ( (lv_solutionSelectedChosen_4_0= rulePreferenceIndicationKind ) ) (otherlv_5= 'for' ( ( ruleQualifiedName ) )+ )? ) )
             {
-            // InternalDecisionmaking.g:1146:2: (this_Strategy_0= ruleStrategy | (otherlv_1= 'Strategy' ( ( ruleQualifiedName ) ) otherlv_3= 'withPreferenceIndication' ( (lv_solutionSelectedChosen_4_0= ruleSolutionSelectionKind ) ) (otherlv_5= 'for' ( ( ruleQualifiedName ) )+ )? ) )
+            // InternalDecisionmaking.g:1146:2: (this_Strategy_0= ruleStrategy | (otherlv_1= 'Strategy' ( ( ruleQualifiedName ) ) otherlv_3= 'withPreferenceIndication' ( (lv_solutionSelectedChosen_4_0= rulePreferenceIndicationKind ) ) (otherlv_5= 'for' ( ( ruleQualifiedName ) )+ )? ) )
             int alt22=2;
             int LA22_0 = input.LA(1);
 
@@ -3132,10 +3132,10 @@ public class InternalDecisionmakingParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalDecisionmaking.g:1156:3: (otherlv_1= 'Strategy' ( ( ruleQualifiedName ) ) otherlv_3= 'withPreferenceIndication' ( (lv_solutionSelectedChosen_4_0= ruleSolutionSelectionKind ) ) (otherlv_5= 'for' ( ( ruleQualifiedName ) )+ )? )
+                    // InternalDecisionmaking.g:1156:3: (otherlv_1= 'Strategy' ( ( ruleQualifiedName ) ) otherlv_3= 'withPreferenceIndication' ( (lv_solutionSelectedChosen_4_0= rulePreferenceIndicationKind ) ) (otherlv_5= 'for' ( ( ruleQualifiedName ) )+ )? )
                     {
-                    // InternalDecisionmaking.g:1156:3: (otherlv_1= 'Strategy' ( ( ruleQualifiedName ) ) otherlv_3= 'withPreferenceIndication' ( (lv_solutionSelectedChosen_4_0= ruleSolutionSelectionKind ) ) (otherlv_5= 'for' ( ( ruleQualifiedName ) )+ )? )
-                    // InternalDecisionmaking.g:1157:4: otherlv_1= 'Strategy' ( ( ruleQualifiedName ) ) otherlv_3= 'withPreferenceIndication' ( (lv_solutionSelectedChosen_4_0= ruleSolutionSelectionKind ) ) (otherlv_5= 'for' ( ( ruleQualifiedName ) )+ )?
+                    // InternalDecisionmaking.g:1156:3: (otherlv_1= 'Strategy' ( ( ruleQualifiedName ) ) otherlv_3= 'withPreferenceIndication' ( (lv_solutionSelectedChosen_4_0= rulePreferenceIndicationKind ) ) (otherlv_5= 'for' ( ( ruleQualifiedName ) )+ )? )
+                    // InternalDecisionmaking.g:1157:4: otherlv_1= 'Strategy' ( ( ruleQualifiedName ) ) otherlv_3= 'withPreferenceIndication' ( (lv_solutionSelectedChosen_4_0= rulePreferenceIndicationKind ) ) (otherlv_5= 'for' ( ( ruleQualifiedName ) )+ )?
                     {
                     otherlv_1=(Token)match(input,13,FOLLOW_5); 
 
@@ -3173,17 +3173,17 @@ public class InternalDecisionmakingParser extends AbstractInternalAntlrParser {
 
                     				newLeafNode(otherlv_3, grammarAccess.getStratAccess().getWithPreferenceIndicationKeyword_1_2());
                     			
-                    // InternalDecisionmaking.g:1181:4: ( (lv_solutionSelectedChosen_4_0= ruleSolutionSelectionKind ) )
-                    // InternalDecisionmaking.g:1182:5: (lv_solutionSelectedChosen_4_0= ruleSolutionSelectionKind )
+                    // InternalDecisionmaking.g:1181:4: ( (lv_solutionSelectedChosen_4_0= rulePreferenceIndicationKind ) )
+                    // InternalDecisionmaking.g:1182:5: (lv_solutionSelectedChosen_4_0= rulePreferenceIndicationKind )
                     {
-                    // InternalDecisionmaking.g:1182:5: (lv_solutionSelectedChosen_4_0= ruleSolutionSelectionKind )
-                    // InternalDecisionmaking.g:1183:6: lv_solutionSelectedChosen_4_0= ruleSolutionSelectionKind
+                    // InternalDecisionmaking.g:1182:5: (lv_solutionSelectedChosen_4_0= rulePreferenceIndicationKind )
+                    // InternalDecisionmaking.g:1183:6: lv_solutionSelectedChosen_4_0= rulePreferenceIndicationKind
                     {
 
-                    						newCompositeNode(grammarAccess.getStratAccess().getSolutionSelectedChosenSolutionSelectionKindEnumRuleCall_1_3_0());
+                    						newCompositeNode(grammarAccess.getStratAccess().getSolutionSelectedChosenPreferenceIndicationKindEnumRuleCall_1_3_0());
                     					
                     pushFollow(FOLLOW_23);
-                    lv_solutionSelectedChosen_4_0=ruleSolutionSelectionKind();
+                    lv_solutionSelectedChosen_4_0=rulePreferenceIndicationKind();
 
                     state._fsp--;
 
@@ -3195,7 +3195,7 @@ public class InternalDecisionmakingParser extends AbstractInternalAntlrParser {
                     							current,
                     							"solutionSelectedChosen",
                     							lv_solutionSelectedChosen_4_0,
-                    							"xtext.Decisionmaking.SolutionSelectionKind");
+                    							"xtext.Decisionmaking.PreferenceIndicationKind");
                     						afterParserOrEnumRuleCall();
                     					
 
@@ -4136,9 +4136,9 @@ public class InternalDecisionmakingParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleQualifiedName"
 
 
-    // $ANTLR start "ruleSolutionSelectionKind"
-    // InternalDecisionmaking.g:1561:1: ruleSolutionSelectionKind returns [Enumerator current=null] : ( (enumLiteral_0= 'Ranking' ) | (enumLiteral_1= 'Rating' ) | (enumLiteral_2= 'YesNo' ) ) ;
-    public final Enumerator ruleSolutionSelectionKind() throws RecognitionException {
+    // $ANTLR start "rulePreferenceIndicationKind"
+    // InternalDecisionmaking.g:1561:1: rulePreferenceIndicationKind returns [Enumerator current=null] : ( (enumLiteral_0= 'Ranking' ) | (enumLiteral_1= 'Rating' ) | (enumLiteral_2= 'YesNo' ) ) ;
+    public final Enumerator rulePreferenceIndicationKind() throws RecognitionException {
         Enumerator current = null;
 
         Token enumLiteral_0=null;
@@ -4186,8 +4186,8 @@ public class InternalDecisionmakingParser extends AbstractInternalAntlrParser {
                     {
                     enumLiteral_0=(Token)match(input,32,FOLLOW_2); 
 
-                    				current = grammarAccess.getSolutionSelectionKindAccess().getRankingEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
-                    				newLeafNode(enumLiteral_0, grammarAccess.getSolutionSelectionKindAccess().getRankingEnumLiteralDeclaration_0());
+                    				current = grammarAccess.getPreferenceIndicationKindAccess().getRankingEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+                    				newLeafNode(enumLiteral_0, grammarAccess.getPreferenceIndicationKindAccess().getRankingEnumLiteralDeclaration_0());
                     			
 
                     }
@@ -4203,8 +4203,8 @@ public class InternalDecisionmakingParser extends AbstractInternalAntlrParser {
                     {
                     enumLiteral_1=(Token)match(input,33,FOLLOW_2); 
 
-                    				current = grammarAccess.getSolutionSelectionKindAccess().getRatingEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
-                    				newLeafNode(enumLiteral_1, grammarAccess.getSolutionSelectionKindAccess().getRatingEnumLiteralDeclaration_1());
+                    				current = grammarAccess.getPreferenceIndicationKindAccess().getRatingEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+                    				newLeafNode(enumLiteral_1, grammarAccess.getPreferenceIndicationKindAccess().getRatingEnumLiteralDeclaration_1());
                     			
 
                     }
@@ -4220,8 +4220,8 @@ public class InternalDecisionmakingParser extends AbstractInternalAntlrParser {
                     {
                     enumLiteral_2=(Token)match(input,34,FOLLOW_2); 
 
-                    				current = grammarAccess.getSolutionSelectionKindAccess().getYesnoEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
-                    				newLeafNode(enumLiteral_2, grammarAccess.getSolutionSelectionKindAccess().getYesnoEnumLiteralDeclaration_2());
+                    				current = grammarAccess.getPreferenceIndicationKindAccess().getYesnoEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
+                    				newLeafNode(enumLiteral_2, grammarAccess.getPreferenceIndicationKindAccess().getYesnoEnumLiteralDeclaration_2());
                     			
 
                     }
@@ -4248,7 +4248,7 @@ public class InternalDecisionmakingParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleSolutionSelectionKind"
+    // $ANTLR end "rulePreferenceIndicationKind"
 
 
     // $ANTLR start "ruleBOOLEAN"

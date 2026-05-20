@@ -15,6 +15,7 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link xtext.decisionmaking.Strategy#getName <em>Name</em>}</li>
+ *   <li>{@link xtext.decisionmaking.Strategy#getPreferenceIndication <em>Preference Indication</em>}</li>
  *   <li>{@link xtext.decisionmaking.Strategy#getRules <em>Rules</em>}</li>
  * </ul>
  *
@@ -45,6 +46,31 @@ public interface Strategy extends Strat
    * @generated
    */
   void setName(String value);
+
+  /**
+   * Returns the value of the '<em><b>Preference Indication</b></em>' attribute.
+   * The literals are from the enumeration {@link xtext.decisionmaking.PreferenceIndicationKind}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Preference Indication</em>' attribute.
+   * @see xtext.decisionmaking.PreferenceIndicationKind
+   * @see #setPreferenceIndication(PreferenceIndicationKind)
+   * @see xtext.decisionmaking.DecisionmakingPackage#getStrategy_PreferenceIndication()
+   * @model
+   * @generated
+   */
+  PreferenceIndicationKind getPreferenceIndication();
+
+  /**
+   * Sets the value of the '{@link xtext.decisionmaking.Strategy#getPreferenceIndication <em>Preference Indication</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Preference Indication</em>' attribute.
+   * @see xtext.decisionmaking.PreferenceIndicationKind
+   * @see #getPreferenceIndication()
+   * @generated
+   */
+  void setPreferenceIndication(PreferenceIndicationKind value);
 
   /**
    * Returns the value of the '<em><b>Rules</b></em>' containment reference list.

@@ -11,14 +11,14 @@ import org.eclipse.emf.common.util.Enumerator;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the literals of the enumeration '<em><b>Solution Selection Kind</b></em>',
+ * A representation of the literals of the enumeration '<em><b>Preference Indication Kind</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see xtext.decisionmaking.DecisionmakingPackage#getSolutionSelectionKind()
+ * @see xtext.decisionmaking.DecisionmakingPackage#getPreferenceIndicationKind()
  * @model
  * @generated
  */
-public enum SolutionSelectionKind implements Enumerator
+public enum PreferenceIndicationKind implements Enumerator
 {
   /**
    * The '<em><b>Ranking</b></em>' literal object.
@@ -84,13 +84,13 @@ public enum SolutionSelectionKind implements Enumerator
   public static final int YESNO_VALUE = 2;
 
   /**
-   * An array of all the '<em><b>Solution Selection Kind</b></em>' enumerators.
+   * An array of all the '<em><b>Preference Indication Kind</b></em>' enumerators.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private static final SolutionSelectionKind[] VALUES_ARRAY =
-    new SolutionSelectionKind[]
+  private static final PreferenceIndicationKind[] VALUES_ARRAY =
+    new PreferenceIndicationKind[]
     {
       RANKING,
       RATING,
@@ -98,26 +98,26 @@ public enum SolutionSelectionKind implements Enumerator
     };
 
   /**
-   * A public read-only list of all the '<em><b>Solution Selection Kind</b></em>' enumerators.
+   * A public read-only list of all the '<em><b>Preference Indication Kind</b></em>' enumerators.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  public static final List<SolutionSelectionKind> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+  public static final List<PreferenceIndicationKind> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
   /**
-   * Returns the '<em><b>Solution Selection Kind</b></em>' literal with the specified literal value.
+   * Returns the '<em><b>Preference Indication Kind</b></em>' literal with the specified literal value.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param literal the literal.
    * @return the matching enumerator or <code>null</code>.
    * @generated
    */
-  public static SolutionSelectionKind get(String literal)
+  public static PreferenceIndicationKind get(String literal)
   {
     for (int i = 0; i < VALUES_ARRAY.length; ++i)
     {
-      SolutionSelectionKind result = VALUES_ARRAY[i];
+      PreferenceIndicationKind result = VALUES_ARRAY[i];
       if (result.toString().equals(literal))
       {
         return result;
@@ -127,18 +127,18 @@ public enum SolutionSelectionKind implements Enumerator
   }
 
   /**
-   * Returns the '<em><b>Solution Selection Kind</b></em>' literal with the specified name.
+   * Returns the '<em><b>Preference Indication Kind</b></em>' literal with the specified name.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param name the name.
    * @return the matching enumerator or <code>null</code>.
    * @generated
    */
-  public static SolutionSelectionKind getByName(String name)
+  public static PreferenceIndicationKind getByName(String name)
   {
     for (int i = 0; i < VALUES_ARRAY.length; ++i)
     {
-      SolutionSelectionKind result = VALUES_ARRAY[i];
+      PreferenceIndicationKind result = VALUES_ARRAY[i];
       if (result.getName().equals(name))
       {
         return result;
@@ -148,14 +148,14 @@ public enum SolutionSelectionKind implements Enumerator
   }
 
   /**
-   * Returns the '<em><b>Solution Selection Kind</b></em>' literal with the specified integer value.
+   * Returns the '<em><b>Preference Indication Kind</b></em>' literal with the specified integer value.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the integer value.
    * @return the matching enumerator or <code>null</code>.
    * @generated
    */
-  public static SolutionSelectionKind get(int value)
+  public static PreferenceIndicationKind get(int value)
   {
     switch (value)
     {
@@ -193,7 +193,7 @@ public enum SolutionSelectionKind implements Enumerator
    * <!-- end-user-doc -->
    * @generated
    */
-  private SolutionSelectionKind(int value, String name, String literal)
+  private PreferenceIndicationKind(int value, String name, String literal)
   {
     this.value = value;
     this.name = name;
@@ -245,4 +245,4 @@ public enum SolutionSelectionKind implements Enumerator
     return literal;
   }
   
-} //SolutionSelectionKind
+} //PreferenceIndicationKind

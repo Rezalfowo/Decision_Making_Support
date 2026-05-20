@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 import xtext.decisionmaking.DecisionmakingPackage;
-import xtext.decisionmaking.SolutionSelectionKind;
+import xtext.decisionmaking.PreferenceIndicationKind;
 import xtext.decisionmaking.Strat;
 import xtext.decisionmaking.StrategyPredefined;
 
@@ -59,7 +59,7 @@ public class StratImpl extends MinimalEObjectImpl.Container implements Strat
    * @generated
    * @ordered
    */
-  protected static final SolutionSelectionKind SOLUTION_SELECTED_CHOSEN_EDEFAULT = SolutionSelectionKind.RANKING;
+  protected static final PreferenceIndicationKind SOLUTION_SELECTED_CHOSEN_EDEFAULT = PreferenceIndicationKind.RANKING;
 
   /**
    * The cached value of the '{@link #getSolutionSelectedChosen() <em>Solution Selected Chosen</em>}' attribute.
@@ -69,7 +69,7 @@ public class StratImpl extends MinimalEObjectImpl.Container implements Strat
    * @generated
    * @ordered
    */
-  protected SolutionSelectionKind solutionSelectedChosen = SOLUTION_SELECTED_CHOSEN_EDEFAULT;
+  protected PreferenceIndicationKind solutionSelectedChosen = SOLUTION_SELECTED_CHOSEN_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getTeamprofiles() <em>Teamprofiles</em>}' reference list.
@@ -153,7 +153,7 @@ public class StratImpl extends MinimalEObjectImpl.Container implements Strat
    * @generated
    */
   @Override
-  public SolutionSelectionKind getSolutionSelectedChosen()
+  public PreferenceIndicationKind getSolutionSelectedChosen()
   {
     return solutionSelectedChosen;
   }
@@ -164,9 +164,9 @@ public class StratImpl extends MinimalEObjectImpl.Container implements Strat
    * @generated
    */
   @Override
-  public void setSolutionSelectedChosen(SolutionSelectionKind newSolutionSelectedChosen)
+  public void setSolutionSelectedChosen(PreferenceIndicationKind newSolutionSelectedChosen)
   {
-    SolutionSelectionKind oldSolutionSelectedChosen = solutionSelectedChosen;
+    PreferenceIndicationKind oldSolutionSelectedChosen = solutionSelectedChosen;
     solutionSelectedChosen = newSolutionSelectedChosen == null ? SOLUTION_SELECTED_CHOSEN_EDEFAULT : newSolutionSelectedChosen;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, DecisionmakingPackage.STRAT__SOLUTION_SELECTED_CHOSEN, oldSolutionSelectedChosen, solutionSelectedChosen));
@@ -223,7 +223,7 @@ public class StratImpl extends MinimalEObjectImpl.Container implements Strat
         setStrat((StrategyPredefined)newValue);
         return;
       case DecisionmakingPackage.STRAT__SOLUTION_SELECTED_CHOSEN:
-        setSolutionSelectedChosen((SolutionSelectionKind)newValue);
+        setSolutionSelectedChosen((PreferenceIndicationKind)newValue);
         return;
       case DecisionmakingPackage.STRAT__TEAMPROFILES:
         getTeamprofiles().clear();

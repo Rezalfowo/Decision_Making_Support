@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link xtext.decisionmaking.DecisionRule#getName <em>Name</em>}</li>
- *   <li>{@link xtext.decisionmaking.DecisionRule#getSolutionselectionaccepted <em>Solutionselectionaccepted</em>}</li>
+ *   <li>{@link xtext.decisionmaking.DecisionRule#getPrefIndAccepted <em>Pref Ind Accepted</em>}</li>
  *   <li>{@link xtext.decisionmaking.DecisionRule#getDescription <em>Description</em>}</li>
  * </ul>
  *
@@ -50,18 +50,18 @@ public interface DecisionRule extends EObject
   void setName(String value);
 
   /**
-   * Returns the value of the '<em><b>Solutionselectionaccepted</b></em>' attribute list.
-   * The list contents are of type {@link xtext.decisionmaking.SolutionSelectionKind}.
-   * The literals are from the enumeration {@link xtext.decisionmaking.SolutionSelectionKind}.
+   * Returns the value of the '<em><b>Pref Ind Accepted</b></em>' attribute list.
+   * The list contents are of type {@link xtext.decisionmaking.PreferenceIndicationKind}.
+   * The literals are from the enumeration {@link xtext.decisionmaking.PreferenceIndicationKind}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Solutionselectionaccepted</em>' attribute list.
-   * @see xtext.decisionmaking.SolutionSelectionKind
-   * @see xtext.decisionmaking.DecisionmakingPackage#getDecisionRule_Solutionselectionaccepted()
+   * @return the value of the '<em>Pref Ind Accepted</em>' attribute list.
+   * @see xtext.decisionmaking.PreferenceIndicationKind
+   * @see xtext.decisionmaking.DecisionmakingPackage#getDecisionRule_PrefIndAccepted()
    * @model unique="false"
    * @generated
    */
-  EList<SolutionSelectionKind> getSolutionselectionaccepted();
+  EList<PreferenceIndicationKind> getPrefIndAccepted();
 
   /**
    * Returns the value of the '<em><b>Description</b></em>' attribute.

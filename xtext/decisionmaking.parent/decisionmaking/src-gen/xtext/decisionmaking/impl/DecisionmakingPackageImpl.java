@@ -25,10 +25,10 @@ import xtext.decisionmaking.Library;
 import xtext.decisionmaking.PredefinedDecisionRule;
 import xtext.decisionmaking.PredefinedRule;
 import xtext.decisionmaking.Preference;
+import xtext.decisionmaking.PreferenceIndicationKind;
 import xtext.decisionmaking.Rule;
 import xtext.decisionmaking.RunTime;
 import xtext.decisionmaking.SADDResult;
-import xtext.decisionmaking.SolutionSelectionKind;
 import xtext.decisionmaking.Strat;
 import xtext.decisionmaking.Strategy;
 import xtext.decisionmaking.StrategyAlgorithm;
@@ -192,7 +192,7 @@ public class DecisionmakingPackageImpl extends EPackageImpl implements Decisionm
    * <!-- end-user-doc -->
    * @generated
    */
-  private EEnum solutionSelectionKindEEnum = null;
+  private EEnum preferenceIndicationKindEEnum = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -295,7 +295,7 @@ public class DecisionmakingPackageImpl extends EPackageImpl implements Decisionm
    * @generated
    */
   @Override
-  public EReference getGroupDecisionSession_Concept()
+  public EReference getGroupDecisionSession_DecisionSupport()
   {
     return (EReference)groupDecisionSessionEClass.getEStructuralFeatures().get(1);
   }
@@ -449,9 +449,20 @@ public class DecisionmakingPackageImpl extends EPackageImpl implements Decisionm
    * @generated
    */
   @Override
+  public EAttribute getStrategy_PreferenceIndication()
+  {
+    return (EAttribute)strategyEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public EReference getStrategy_Rules()
   {
-    return (EReference)strategyEClass.getEStructuralFeatures().get(1);
+    return (EReference)strategyEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -614,7 +625,7 @@ public class DecisionmakingPackageImpl extends EPackageImpl implements Decisionm
    * @generated
    */
   @Override
-  public EAttribute getDecisionRule_Solutionselectionaccepted()
+  public EAttribute getDecisionRule_PrefIndAccepted()
   {
     return (EAttribute)decisionRuleEClass.getEStructuralFeatures().get(1);
   }
@@ -658,7 +669,7 @@ public class DecisionmakingPackageImpl extends EPackageImpl implements Decisionm
    * @generated
    */
   @Override
-  public EAttribute getAlgorithm_Solutionselectionaccepted()
+  public EAttribute getAlgorithm_PrefIndAccepted()
   {
     return (EAttribute)algorithmEClass.getEStructuralFeatures().get(1);
   }
@@ -955,9 +966,9 @@ public class DecisionmakingPackageImpl extends EPackageImpl implements Decisionm
    * @generated
    */
   @Override
-  public EEnum getSolutionSelectionKind()
+  public EEnum getPreferenceIndicationKind()
   {
-    return solutionSelectionKindEEnum;
+    return preferenceIndicationKindEEnum;
   }
 
   /**
@@ -1004,7 +1015,7 @@ public class DecisionmakingPackageImpl extends EPackageImpl implements Decisionm
     // Create classes and their features
     groupDecisionSessionEClass = createEClass(GROUP_DECISION_SESSION);
     createEReference(groupDecisionSessionEClass, GROUP_DECISION_SESSION__IMPORTS);
-    createEReference(groupDecisionSessionEClass, GROUP_DECISION_SESSION__CONCEPT);
+    createEReference(groupDecisionSessionEClass, GROUP_DECISION_SESSION__DECISION_SUPPORT);
 
     libDesRunEClass = createEClass(LIB_DES_RUN);
     createEReference(libDesRunEClass, LIB_DES_RUN__LIBRARY);
@@ -1022,6 +1033,7 @@ public class DecisionmakingPackageImpl extends EPackageImpl implements Decisionm
 
     strategyEClass = createEClass(STRATEGY);
     createEAttribute(strategyEClass, STRATEGY__NAME);
+    createEAttribute(strategyEClass, STRATEGY__PREFERENCE_INDICATION);
     createEReference(strategyEClass, STRATEGY__RULES);
 
     strategyPredefinedEClass = createEClass(STRATEGY_PREDEFINED);
@@ -1044,12 +1056,12 @@ public class DecisionmakingPackageImpl extends EPackageImpl implements Decisionm
 
     decisionRuleEClass = createEClass(DECISION_RULE);
     createEAttribute(decisionRuleEClass, DECISION_RULE__NAME);
-    createEAttribute(decisionRuleEClass, DECISION_RULE__SOLUTIONSELECTIONACCEPTED);
+    createEAttribute(decisionRuleEClass, DECISION_RULE__PREF_IND_ACCEPTED);
     createEAttribute(decisionRuleEClass, DECISION_RULE__DESCRIPTION);
 
     algorithmEClass = createEClass(ALGORITHM);
     createEAttribute(algorithmEClass, ALGORITHM__NAME);
-    createEAttribute(algorithmEClass, ALGORITHM__SOLUTIONSELECTIONACCEPTED);
+    createEAttribute(algorithmEClass, ALGORITHM__PREF_IND_ACCEPTED);
     createEAttribute(algorithmEClass, ALGORITHM__CONSIDERS_TP);
     createEAttribute(algorithmEClass, ALGORITHM__DESCRIPTION);
 
@@ -1085,7 +1097,7 @@ public class DecisionmakingPackageImpl extends EPackageImpl implements Decisionm
     createEAttribute(preferenceEClass, PREFERENCE__RATIONALE);
 
     // Create enums
-    solutionSelectionKindEEnum = createEEnum(SOLUTION_SELECTION_KIND);
+    preferenceIndicationKindEEnum = createEEnum(PREFERENCE_INDICATION_KIND);
     booleanEEnum = createEEnum(BOOLEAN);
   }
 
@@ -1131,7 +1143,7 @@ public class DecisionmakingPackageImpl extends EPackageImpl implements Decisionm
     // Initialize classes and features; add operations and parameters
     initEClass(groupDecisionSessionEClass, GroupDecisionSession.class, "GroupDecisionSession", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getGroupDecisionSession_Imports(), this.getImport(), null, "imports", null, 0, -1, GroupDecisionSession.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getGroupDecisionSession_Concept(), this.getLibDesRun(), null, "concept", null, 0, 1, GroupDecisionSession.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getGroupDecisionSession_DecisionSupport(), this.getLibDesRun(), null, "decisionSupport", null, 0, 1, GroupDecisionSession.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(libDesRunEClass, LibDesRun.class, "LibDesRun", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getLibDesRun_Library(), this.getLibrary(), null, "library", null, 0, 1, LibDesRun.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1149,6 +1161,7 @@ public class DecisionmakingPackageImpl extends EPackageImpl implements Decisionm
 
     initEClass(strategyEClass, Strategy.class, "Strategy", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getStrategy_Name(), ecorePackage.getEString(), "name", null, 0, 1, Strategy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getStrategy_PreferenceIndication(), this.getPreferenceIndicationKind(), "preferenceIndication", null, 0, 1, Strategy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getStrategy_Rules(), this.getRule(), null, "rules", null, 0, -1, Strategy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(strategyPredefinedEClass, StrategyPredefined.class, "StrategyPredefined", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1171,12 +1184,12 @@ public class DecisionmakingPackageImpl extends EPackageImpl implements Decisionm
 
     initEClass(decisionRuleEClass, DecisionRule.class, "DecisionRule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getDecisionRule_Name(), ecorePackage.getEString(), "name", null, 0, 1, DecisionRule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getDecisionRule_Solutionselectionaccepted(), this.getSolutionSelectionKind(), "solutionselectionaccepted", null, 0, -1, DecisionRule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getDecisionRule_PrefIndAccepted(), this.getPreferenceIndicationKind(), "prefIndAccepted", null, 0, -1, DecisionRule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getDecisionRule_Description(), ecorePackage.getEString(), "description", null, 0, 1, DecisionRule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(algorithmEClass, Algorithm.class, "Algorithm", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getAlgorithm_Name(), ecorePackage.getEString(), "name", null, 0, 1, Algorithm.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getAlgorithm_Solutionselectionaccepted(), this.getSolutionSelectionKind(), "solutionselectionaccepted", null, 0, -1, Algorithm.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAlgorithm_PrefIndAccepted(), this.getPreferenceIndicationKind(), "prefIndAccepted", null, 0, -1, Algorithm.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getAlgorithm_ConsidersTP(), this.getBOOLEAN(), "considersTP", null, 0, 1, Algorithm.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getAlgorithm_Description(), ecorePackage.getEString(), "description", null, 0, 1, Algorithm.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1190,7 +1203,7 @@ public class DecisionmakingPackageImpl extends EPackageImpl implements Decisionm
 
     initEClass(stratEClass, Strat.class, "Strat", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getStrat_Strat(), this.getStrategyPredefined(), null, "strat", null, 0, 1, Strat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getStrat_SolutionSelectedChosen(), this.getSolutionSelectionKind(), "solutionSelectedChosen", null, 0, 1, Strat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getStrat_SolutionSelectedChosen(), this.getPreferenceIndicationKind(), "solutionSelectedChosen", null, 0, 1, Strat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getStrat_Teamprofiles(), theTeamprofilePackage.getProfile(), null, "teamprofiles", null, 0, -1, Strat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(runTimeEClass, RunTime.class, "RunTime", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1212,10 +1225,10 @@ public class DecisionmakingPackageImpl extends EPackageImpl implements Decisionm
     initEAttribute(getPreference_Rationale(), ecorePackage.getEString(), "rationale", null, 0, 1, Preference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Initialize enums and add enum literals
-    initEEnum(solutionSelectionKindEEnum, SolutionSelectionKind.class, "SolutionSelectionKind");
-    addEEnumLiteral(solutionSelectionKindEEnum, SolutionSelectionKind.RANKING);
-    addEEnumLiteral(solutionSelectionKindEEnum, SolutionSelectionKind.RATING);
-    addEEnumLiteral(solutionSelectionKindEEnum, SolutionSelectionKind.YESNO);
+    initEEnum(preferenceIndicationKindEEnum, PreferenceIndicationKind.class, "PreferenceIndicationKind");
+    addEEnumLiteral(preferenceIndicationKindEEnum, PreferenceIndicationKind.RANKING);
+    addEEnumLiteral(preferenceIndicationKindEEnum, PreferenceIndicationKind.RATING);
+    addEEnumLiteral(preferenceIndicationKindEEnum, PreferenceIndicationKind.YESNO);
 
     initEEnum(booleanEEnum, xtext.decisionmaking.BOOLEAN.class, "BOOLEAN");
     addEEnumLiteral(booleanEEnum, xtext.decisionmaking.BOOLEAN.NO);

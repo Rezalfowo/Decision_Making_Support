@@ -53,28 +53,28 @@ public interface Strat extends EObject
 
   /**
    * Returns the value of the '<em><b>Solution Selected Chosen</b></em>' attribute.
-   * The literals are from the enumeration {@link xtext.decisionmaking.SolutionSelectionKind}.
+   * The literals are from the enumeration {@link xtext.decisionmaking.PreferenceIndicationKind}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>Solution Selected Chosen</em>' attribute.
-   * @see xtext.decisionmaking.SolutionSelectionKind
-   * @see #setSolutionSelectedChosen(SolutionSelectionKind)
+   * @see xtext.decisionmaking.PreferenceIndicationKind
+   * @see #setSolutionSelectedChosen(PreferenceIndicationKind)
    * @see xtext.decisionmaking.DecisionmakingPackage#getStrat_SolutionSelectedChosen()
    * @model
    * @generated
    */
-  SolutionSelectionKind getSolutionSelectedChosen();
+  PreferenceIndicationKind getSolutionSelectedChosen();
 
   /**
    * Sets the value of the '{@link xtext.decisionmaking.Strat#getSolutionSelectedChosen <em>Solution Selected Chosen</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Solution Selected Chosen</em>' attribute.
-   * @see xtext.decisionmaking.SolutionSelectionKind
+   * @see xtext.decisionmaking.PreferenceIndicationKind
    * @see #getSolutionSelectedChosen()
    * @generated
    */
-  void setSolutionSelectedChosen(SolutionSelectionKind value);
+  void setSolutionSelectedChosen(PreferenceIndicationKind value);
 
   /**
    * Returns the value of the '<em><b>Teamprofiles</b></em>' reference list.

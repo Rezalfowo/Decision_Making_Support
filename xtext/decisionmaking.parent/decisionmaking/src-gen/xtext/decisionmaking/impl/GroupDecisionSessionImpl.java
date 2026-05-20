@@ -33,7 +33,7 @@ import xtext.decisionmaking.LibDesRun;
  * </p>
  * <ul>
  *   <li>{@link xtext.decisionmaking.impl.GroupDecisionSessionImpl#getImports <em>Imports</em>}</li>
- *   <li>{@link xtext.decisionmaking.impl.GroupDecisionSessionImpl#getConcept <em>Concept</em>}</li>
+ *   <li>{@link xtext.decisionmaking.impl.GroupDecisionSessionImpl#getDecisionSupport <em>Decision Support</em>}</li>
  * </ul>
  *
  * @generated
@@ -51,14 +51,14 @@ public class GroupDecisionSessionImpl extends MinimalEObjectImpl.Container imple
   protected EList<Import> imports;
 
   /**
-   * The cached value of the '{@link #getConcept() <em>Concept</em>}' containment reference.
+   * The cached value of the '{@link #getDecisionSupport() <em>Decision Support</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getConcept()
+   * @see #getDecisionSupport()
    * @generated
    * @ordered
    */
-  protected LibDesRun concept;
+  protected LibDesRun decisionSupport;
 
   /**
    * <!-- begin-user-doc -->
@@ -102,9 +102,9 @@ public class GroupDecisionSessionImpl extends MinimalEObjectImpl.Container imple
    * @generated
    */
   @Override
-  public LibDesRun getConcept()
+  public LibDesRun getDecisionSupport()
   {
-    return concept;
+    return decisionSupport;
   }
 
   /**
@@ -112,13 +112,13 @@ public class GroupDecisionSessionImpl extends MinimalEObjectImpl.Container imple
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetConcept(LibDesRun newConcept, NotificationChain msgs)
+  public NotificationChain basicSetDecisionSupport(LibDesRun newDecisionSupport, NotificationChain msgs)
   {
-    LibDesRun oldConcept = concept;
-    concept = newConcept;
+    LibDesRun oldDecisionSupport = decisionSupport;
+    decisionSupport = newDecisionSupport;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, DecisionmakingPackage.GROUP_DECISION_SESSION__CONCEPT, oldConcept, newConcept);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, DecisionmakingPackage.GROUP_DECISION_SESSION__DECISION_SUPPORT, oldDecisionSupport, newDecisionSupport);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -130,20 +130,20 @@ public class GroupDecisionSessionImpl extends MinimalEObjectImpl.Container imple
    * @generated
    */
   @Override
-  public void setConcept(LibDesRun newConcept)
+  public void setDecisionSupport(LibDesRun newDecisionSupport)
   {
-    if (newConcept != concept)
+    if (newDecisionSupport != decisionSupport)
     {
       NotificationChain msgs = null;
-      if (concept != null)
-        msgs = ((InternalEObject)concept).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - DecisionmakingPackage.GROUP_DECISION_SESSION__CONCEPT, null, msgs);
-      if (newConcept != null)
-        msgs = ((InternalEObject)newConcept).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - DecisionmakingPackage.GROUP_DECISION_SESSION__CONCEPT, null, msgs);
-      msgs = basicSetConcept(newConcept, msgs);
+      if (decisionSupport != null)
+        msgs = ((InternalEObject)decisionSupport).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - DecisionmakingPackage.GROUP_DECISION_SESSION__DECISION_SUPPORT, null, msgs);
+      if (newDecisionSupport != null)
+        msgs = ((InternalEObject)newDecisionSupport).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - DecisionmakingPackage.GROUP_DECISION_SESSION__DECISION_SUPPORT, null, msgs);
+      msgs = basicSetDecisionSupport(newDecisionSupport, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, DecisionmakingPackage.GROUP_DECISION_SESSION__CONCEPT, newConcept, newConcept));
+      eNotify(new ENotificationImpl(this, Notification.SET, DecisionmakingPackage.GROUP_DECISION_SESSION__DECISION_SUPPORT, newDecisionSupport, newDecisionSupport));
   }
 
   /**
@@ -158,8 +158,8 @@ public class GroupDecisionSessionImpl extends MinimalEObjectImpl.Container imple
     {
       case DecisionmakingPackage.GROUP_DECISION_SESSION__IMPORTS:
         return ((InternalEList<?>)getImports()).basicRemove(otherEnd, msgs);
-      case DecisionmakingPackage.GROUP_DECISION_SESSION__CONCEPT:
-        return basicSetConcept(null, msgs);
+      case DecisionmakingPackage.GROUP_DECISION_SESSION__DECISION_SUPPORT:
+        return basicSetDecisionSupport(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -176,8 +176,8 @@ public class GroupDecisionSessionImpl extends MinimalEObjectImpl.Container imple
     {
       case DecisionmakingPackage.GROUP_DECISION_SESSION__IMPORTS:
         return getImports();
-      case DecisionmakingPackage.GROUP_DECISION_SESSION__CONCEPT:
-        return getConcept();
+      case DecisionmakingPackage.GROUP_DECISION_SESSION__DECISION_SUPPORT:
+        return getDecisionSupport();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -197,8 +197,8 @@ public class GroupDecisionSessionImpl extends MinimalEObjectImpl.Container imple
         getImports().clear();
         getImports().addAll((Collection<? extends Import>)newValue);
         return;
-      case DecisionmakingPackage.GROUP_DECISION_SESSION__CONCEPT:
-        setConcept((LibDesRun)newValue);
+      case DecisionmakingPackage.GROUP_DECISION_SESSION__DECISION_SUPPORT:
+        setDecisionSupport((LibDesRun)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -217,8 +217,8 @@ public class GroupDecisionSessionImpl extends MinimalEObjectImpl.Container imple
       case DecisionmakingPackage.GROUP_DECISION_SESSION__IMPORTS:
         getImports().clear();
         return;
-      case DecisionmakingPackage.GROUP_DECISION_SESSION__CONCEPT:
-        setConcept((LibDesRun)null);
+      case DecisionmakingPackage.GROUP_DECISION_SESSION__DECISION_SUPPORT:
+        setDecisionSupport((LibDesRun)null);
         return;
     }
     super.eUnset(featureID);
@@ -236,8 +236,8 @@ public class GroupDecisionSessionImpl extends MinimalEObjectImpl.Container imple
     {
       case DecisionmakingPackage.GROUP_DECISION_SESSION__IMPORTS:
         return imports != null && !imports.isEmpty();
-      case DecisionmakingPackage.GROUP_DECISION_SESSION__CONCEPT:
-        return concept != null;
+      case DecisionmakingPackage.GROUP_DECISION_SESSION__DECISION_SUPPORT:
+        return decisionSupport != null;
     }
     return super.eIsSet(featureID);
   }

@@ -114,7 +114,7 @@ public class DecisionmakingSemanticSequencer extends AbstractDelegatingSemanticS
 	 *     Algorithm returns Algorithm
 	 *
 	 * Constraint:
-	 *     (name=ID solutionselectionaccepted+=SolutionSelectionKind* considersTP=BOOLEAN description=STRING)
+	 *     (name=ID prefIndAccepted+=PreferenceIndicationKind* considersTP=BOOLEAN description=STRING)
 	 * </pre>
 	 */
 	protected void sequence_Algorithm(ISerializationContext context, Algorithm semanticObject) {
@@ -142,7 +142,7 @@ public class DecisionmakingSemanticSequencer extends AbstractDelegatingSemanticS
 	 *     DecisionRule returns DecisionRule
 	 *
 	 * Constraint:
-	 *     (name=ID solutionselectionaccepted+=SolutionSelectionKind* description=STRING)
+	 *     (name=ID prefIndAccepted+=PreferenceIndicationKind* description=STRING)
 	 * </pre>
 	 */
 	protected void sequence_DecisionRule(ISerializationContext context, DecisionRule semanticObject) {
@@ -190,7 +190,7 @@ public class DecisionmakingSemanticSequencer extends AbstractDelegatingSemanticS
 	 *     GroupDecisionSession returns GroupDecisionSession
 	 *
 	 * Constraint:
-	 *     (imports+=Import* concept=LibDesRun)
+	 *     (imports+=Import* decisionSupport=LibDesRun)
 	 * </pre>
 	 */
 	protected void sequence_GroupDecisionSession(ISerializationContext context, GroupDecisionSession semanticObject) {
@@ -327,7 +327,7 @@ public class DecisionmakingSemanticSequencer extends AbstractDelegatingSemanticS
 	 *     Strat returns Strat
 	 *
 	 * Constraint:
-	 *     (strat=[StrategyPredefined|QualifiedName] solutionSelectedChosen=SolutionSelectionKind teamprofiles+=[Profile|QualifiedName]*)
+	 *     (strat=[StrategyPredefined|QualifiedName] solutionSelectedChosen=PreferenceIndicationKind teamprofiles+=[Profile|QualifiedName]*)
 	 * </pre>
 	 */
 	protected void sequence_Strat(ISerializationContext context, Strat semanticObject) {
@@ -393,7 +393,7 @@ public class DecisionmakingSemanticSequencer extends AbstractDelegatingSemanticS
 	 *     Strat returns Strategy
 	 *
 	 * Constraint:
-	 *     (name=ID solutionSelectedChosen=SolutionSelectionKind rules+=Rule* rules+=Rule*)
+	 *     (name=ID preferenceIndication=PreferenceIndicationKind rules+=Rule* rules+=Rule*)
 	 * </pre>
 	 */
 	protected void sequence_Strategy(ISerializationContext context, Strategy semanticObject) {

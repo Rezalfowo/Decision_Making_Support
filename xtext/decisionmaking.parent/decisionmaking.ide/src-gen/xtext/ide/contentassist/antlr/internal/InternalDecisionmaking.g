@@ -574,16 +574,16 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-// Rule SolutionSelectionKind
-ruleSolutionSelectionKind
+// Rule PreferenceIndicationKind
+rulePreferenceIndicationKind
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getSolutionSelectionKindAccess().getAlternatives()); }
-		(rule__SolutionSelectionKind__Alternatives)
-		{ after(grammarAccess.getSolutionSelectionKindAccess().getAlternatives()); }
+		{ before(grammarAccess.getPreferenceIndicationKindAccess().getAlternatives()); }
+		(rule__PreferenceIndicationKind__Alternatives)
+		{ after(grammarAccess.getPreferenceIndicationKindAccess().getAlternatives()); }
 	)
 ;
 finally {
@@ -696,27 +696,27 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__SolutionSelectionKind__Alternatives
+rule__PreferenceIndicationKind__Alternatives
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getSolutionSelectionKindAccess().getRankingEnumLiteralDeclaration_0()); }
+		{ before(grammarAccess.getPreferenceIndicationKindAccess().getRankingEnumLiteralDeclaration_0()); }
 		('Ranking')
-		{ after(grammarAccess.getSolutionSelectionKindAccess().getRankingEnumLiteralDeclaration_0()); }
+		{ after(grammarAccess.getPreferenceIndicationKindAccess().getRankingEnumLiteralDeclaration_0()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getSolutionSelectionKindAccess().getRatingEnumLiteralDeclaration_1()); }
+		{ before(grammarAccess.getPreferenceIndicationKindAccess().getRatingEnumLiteralDeclaration_1()); }
 		('Rating')
-		{ after(grammarAccess.getSolutionSelectionKindAccess().getRatingEnumLiteralDeclaration_1()); }
+		{ after(grammarAccess.getPreferenceIndicationKindAccess().getRatingEnumLiteralDeclaration_1()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getSolutionSelectionKindAccess().getYesnoEnumLiteralDeclaration_2()); }
+		{ before(grammarAccess.getPreferenceIndicationKindAccess().getYesnoEnumLiteralDeclaration_2()); }
 		('YesNo')
-		{ after(grammarAccess.getSolutionSelectionKindAccess().getYesnoEnumLiteralDeclaration_2()); }
+		{ after(grammarAccess.getPreferenceIndicationKindAccess().getYesnoEnumLiteralDeclaration_2()); }
 	)
 ;
 finally {
@@ -788,9 +788,9 @@ rule__GroupDecisionSession__Group__1__Impl
 	}
 :
 (
-	{ before(grammarAccess.getGroupDecisionSessionAccess().getConceptAssignment_1()); }
-	(rule__GroupDecisionSession__ConceptAssignment_1)
-	{ after(grammarAccess.getGroupDecisionSessionAccess().getConceptAssignment_1()); }
+	{ before(grammarAccess.getGroupDecisionSessionAccess().getDecisionSupportAssignment_1()); }
+	(rule__GroupDecisionSession__DecisionSupportAssignment_1)
+	{ after(grammarAccess.getGroupDecisionSessionAccess().getDecisionSupportAssignment_1()); }
 )
 ;
 finally {
@@ -1032,9 +1032,9 @@ rule__Strategy__Group__3__Impl
 	}
 :
 (
-	{ before(grammarAccess.getStrategyAccess().getSolutionSelectedChosenAssignment_3()); }
-	(rule__Strategy__SolutionSelectedChosenAssignment_3)
-	{ after(grammarAccess.getStrategyAccess().getSolutionSelectedChosenAssignment_3()); }
+	{ before(grammarAccess.getStrategyAccess().getPreferenceIndicationAssignment_3()); }
+	(rule__Strategy__PreferenceIndicationAssignment_3)
+	{ after(grammarAccess.getStrategyAccess().getPreferenceIndicationAssignment_3()); }
 )
 ;
 finally {
@@ -1741,9 +1741,9 @@ rule__DecisionRule__Group__3__Impl
 	}
 :
 (
-	{ before(grammarAccess.getDecisionRuleAccess().getSolutionselectionacceptedAssignment_3()); }
-	(rule__DecisionRule__SolutionselectionacceptedAssignment_3)*
-	{ after(grammarAccess.getDecisionRuleAccess().getSolutionselectionacceptedAssignment_3()); }
+	{ before(grammarAccess.getDecisionRuleAccess().getPrefIndAcceptedAssignment_3()); }
+	(rule__DecisionRule__PrefIndAcceptedAssignment_3)*
+	{ after(grammarAccess.getDecisionRuleAccess().getPrefIndAcceptedAssignment_3()); }
 )
 ;
 finally {
@@ -1903,9 +1903,9 @@ rule__Algorithm__Group__3__Impl
 	}
 :
 (
-	{ before(grammarAccess.getAlgorithmAccess().getSolutionselectionacceptedAssignment_3()); }
-	(rule__Algorithm__SolutionselectionacceptedAssignment_3)*
-	{ after(grammarAccess.getAlgorithmAccess().getSolutionselectionacceptedAssignment_3()); }
+	{ before(grammarAccess.getAlgorithmAccess().getPrefIndAcceptedAssignment_3()); }
+	(rule__Algorithm__PrefIndAcceptedAssignment_3)*
+	{ after(grammarAccess.getAlgorithmAccess().getPrefIndAcceptedAssignment_3()); }
 )
 ;
 finally {
@@ -3382,15 +3382,15 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GroupDecisionSession__ConceptAssignment_1
+rule__GroupDecisionSession__DecisionSupportAssignment_1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGroupDecisionSessionAccess().getConceptLibDesRunParserRuleCall_1_0()); }
+		{ before(grammarAccess.getGroupDecisionSessionAccess().getDecisionSupportLibDesRunParserRuleCall_1_0()); }
 		ruleLibDesRun
-		{ after(grammarAccess.getGroupDecisionSessionAccess().getConceptLibDesRunParserRuleCall_1_0()); }
+		{ after(grammarAccess.getGroupDecisionSessionAccess().getDecisionSupportLibDesRunParserRuleCall_1_0()); }
 	)
 ;
 finally {
@@ -3532,15 +3532,15 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Strategy__SolutionSelectedChosenAssignment_3
+rule__Strategy__PreferenceIndicationAssignment_3
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getStrategyAccess().getSolutionSelectedChosenSolutionSelectionKindEnumRuleCall_3_0()); }
-		ruleSolutionSelectionKind
-		{ after(grammarAccess.getStrategyAccess().getSolutionSelectedChosenSolutionSelectionKindEnumRuleCall_3_0()); }
+		{ before(grammarAccess.getStrategyAccess().getPreferenceIndicationPreferenceIndicationKindEnumRuleCall_3_0()); }
+		rulePreferenceIndicationKind
+		{ after(grammarAccess.getStrategyAccess().getPreferenceIndicationPreferenceIndicationKindEnumRuleCall_3_0()); }
 	)
 ;
 finally {
@@ -3713,15 +3713,15 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__DecisionRule__SolutionselectionacceptedAssignment_3
+rule__DecisionRule__PrefIndAcceptedAssignment_3
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getDecisionRuleAccess().getSolutionselectionacceptedSolutionSelectionKindEnumRuleCall_3_0()); }
-		ruleSolutionSelectionKind
-		{ after(grammarAccess.getDecisionRuleAccess().getSolutionselectionacceptedSolutionSelectionKindEnumRuleCall_3_0()); }
+		{ before(grammarAccess.getDecisionRuleAccess().getPrefIndAcceptedPreferenceIndicationKindEnumRuleCall_3_0()); }
+		rulePreferenceIndicationKind
+		{ after(grammarAccess.getDecisionRuleAccess().getPrefIndAcceptedPreferenceIndicationKindEnumRuleCall_3_0()); }
 	)
 ;
 finally {
@@ -3758,15 +3758,15 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Algorithm__SolutionselectionacceptedAssignment_3
+rule__Algorithm__PrefIndAcceptedAssignment_3
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getAlgorithmAccess().getSolutionselectionacceptedSolutionSelectionKindEnumRuleCall_3_0()); }
-		ruleSolutionSelectionKind
-		{ after(grammarAccess.getAlgorithmAccess().getSolutionselectionacceptedSolutionSelectionKindEnumRuleCall_3_0()); }
+		{ before(grammarAccess.getAlgorithmAccess().getPrefIndAcceptedPreferenceIndicationKindEnumRuleCall_3_0()); }
+		rulePreferenceIndicationKind
+		{ after(grammarAccess.getAlgorithmAccess().getPrefIndAcceptedPreferenceIndicationKindEnumRuleCall_3_0()); }
 	)
 ;
 finally {
@@ -3892,9 +3892,9 @@ rule__Strat__SolutionSelectedChosenAssignment_1_3
 	}
 :
 	(
-		{ before(grammarAccess.getStratAccess().getSolutionSelectedChosenSolutionSelectionKindEnumRuleCall_1_3_0()); }
-		ruleSolutionSelectionKind
-		{ after(grammarAccess.getStratAccess().getSolutionSelectedChosenSolutionSelectionKindEnumRuleCall_1_3_0()); }
+		{ before(grammarAccess.getStratAccess().getSolutionSelectedChosenPreferenceIndicationKindEnumRuleCall_1_3_0()); }
+		rulePreferenceIndicationKind
+		{ after(grammarAccess.getStratAccess().getSolutionSelectedChosenPreferenceIndicationKindEnumRuleCall_1_3_0()); }
 	)
 ;
 finally {

@@ -6,10 +6,10 @@
     complianceLevel="11.0" copyrightFields="false" runtimeVersion="2.29" usedGenPackages="platform:/resource/sadd/model/generated/Sadd.genmodel#//sadd platform:/resource/teamprofile/model/generated/Teamprofile.genmodel#//teamprofile">
   <genPackages prefix="Decisionmaking" basePackage="xtext" disposableProviderFactory="true"
       fileExtensions="dm" ecorePackage="Decisionmaking.ecore#/">
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Decisionmaking.ecore#//SolutionSelectionKind">
-      <genEnumLiterals ecoreEnumLiteral="Decisionmaking.ecore#//SolutionSelectionKind/ranking"/>
-      <genEnumLiterals ecoreEnumLiteral="Decisionmaking.ecore#//SolutionSelectionKind/rating"/>
-      <genEnumLiterals ecoreEnumLiteral="Decisionmaking.ecore#//SolutionSelectionKind/yesno"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Decisionmaking.ecore#//PreferenceIndicationKind">
+      <genEnumLiterals ecoreEnumLiteral="Decisionmaking.ecore#//PreferenceIndicationKind/ranking"/>
+      <genEnumLiterals ecoreEnumLiteral="Decisionmaking.ecore#//PreferenceIndicationKind/rating"/>
+      <genEnumLiterals ecoreEnumLiteral="Decisionmaking.ecore#//PreferenceIndicationKind/yesno"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="Decisionmaking.ecore#//BOOLEAN">
       <genEnumLiterals ecoreEnumLiteral="Decisionmaking.ecore#//BOOLEAN/no"/>
@@ -17,7 +17,7 @@
     </genEnums>
     <genClasses ecoreClass="Decisionmaking.ecore#//GroupDecisionSession">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Decisionmaking.ecore#//GroupDecisionSession/imports"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Decisionmaking.ecore#//GroupDecisionSession/concept"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Decisionmaking.ecore#//GroupDecisionSession/decisionSupport"/>
     </genClasses>
     <genClasses ecoreClass="Decisionmaking.ecore#//LibDesRun">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Decisionmaking.ecore#//LibDesRun/library"/>
@@ -35,6 +35,7 @@
     </genClasses>
     <genClasses ecoreClass="Decisionmaking.ecore#//Strategy">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Decisionmaking.ecore#//Strategy/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Decisionmaking.ecore#//Strategy/preferenceIndication"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Decisionmaking.ecore#//Strategy/rules"/>
     </genClasses>
     <genClasses ecoreClass="Decisionmaking.ecore#//StrategyPredefined">
@@ -55,12 +56,12 @@
     </genClasses>
     <genClasses ecoreClass="Decisionmaking.ecore#//DecisionRule">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Decisionmaking.ecore#//DecisionRule/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Decisionmaking.ecore#//DecisionRule/solutionselectionaccepted"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Decisionmaking.ecore#//DecisionRule/prefIndAccepted"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Decisionmaking.ecore#//DecisionRule/description"/>
     </genClasses>
     <genClasses ecoreClass="Decisionmaking.ecore#//Algorithm">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Decisionmaking.ecore#//Algorithm/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Decisionmaking.ecore#//Algorithm/solutionselectionaccepted"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Decisionmaking.ecore#//Algorithm/prefIndAccepted"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Decisionmaking.ecore#//Algorithm/considersTP"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Decisionmaking.ecore#//Algorithm/description"/>
     </genClasses>

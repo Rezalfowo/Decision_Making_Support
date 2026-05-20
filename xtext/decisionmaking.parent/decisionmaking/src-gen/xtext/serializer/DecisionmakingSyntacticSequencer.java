@@ -95,9 +95,9 @@ public class DecisionmakingSyntacticSequencer extends AbstractSyntacticSequencer
 	 *     'then'*
 	 *
 	 * This ambiguous syntax occurs at:
+	 *     preferenceIndication=PreferenceIndicationKind '{' (ambiguity) '}' (rule end)
 	 *     rules+=Rule (ambiguity) '}' (rule end)
 	 *     rules+=Rule (ambiguity) rules+=Rule
-	 *     solutionSelectedChosen=SolutionSelectionKind '{' (ambiguity) '}' (rule end)
 	 
 	 * </pre>
 	 */
@@ -111,8 +111,8 @@ public class DecisionmakingSyntacticSequencer extends AbstractSyntacticSequencer
 	 *     'then'+
 	 *
 	 * This ambiguous syntax occurs at:
+	 *     preferenceIndication=PreferenceIndicationKind '{' (ambiguity) rules+=Rule
 	 *     rules+=Rule (ambiguity) rules+=Rule
-	 *     solutionSelectedChosen=SolutionSelectionKind '{' (ambiguity) rules+=Rule
 	 
 	 * </pre>
 	 */

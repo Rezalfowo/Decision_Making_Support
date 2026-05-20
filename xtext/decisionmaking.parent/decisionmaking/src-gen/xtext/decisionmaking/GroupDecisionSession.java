@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link xtext.decisionmaking.GroupDecisionSession#getImports <em>Imports</em>}</li>
- *   <li>{@link xtext.decisionmaking.GroupDecisionSession#getConcept <em>Concept</em>}</li>
+ *   <li>{@link xtext.decisionmaking.GroupDecisionSession#getDecisionSupport <em>Decision Support</em>}</li>
  * </ul>
  *
  * @see xtext.decisionmaking.DecisionmakingPackage#getGroupDecisionSession()
@@ -39,25 +39,25 @@ public interface GroupDecisionSession extends EObject
   EList<Import> getImports();
 
   /**
-   * Returns the value of the '<em><b>Concept</b></em>' containment reference.
+   * Returns the value of the '<em><b>Decision Support</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Concept</em>' containment reference.
-   * @see #setConcept(LibDesRun)
-   * @see xtext.decisionmaking.DecisionmakingPackage#getGroupDecisionSession_Concept()
+   * @return the value of the '<em>Decision Support</em>' containment reference.
+   * @see #setDecisionSupport(LibDesRun)
+   * @see xtext.decisionmaking.DecisionmakingPackage#getGroupDecisionSession_DecisionSupport()
    * @model containment="true"
    * @generated
    */
-  LibDesRun getConcept();
+  LibDesRun getDecisionSupport();
 
   /**
-   * Sets the value of the '{@link xtext.decisionmaking.GroupDecisionSession#getConcept <em>Concept</em>}' containment reference.
+   * Sets the value of the '{@link xtext.decisionmaking.GroupDecisionSession#getDecisionSupport <em>Decision Support</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Concept</em>' containment reference.
-   * @see #getConcept()
+   * @param value the new value of the '<em>Decision Support</em>' containment reference.
+   * @see #getDecisionSupport()
    * @generated
    */
-  void setConcept(LibDesRun value);
+  void setDecisionSupport(LibDesRun value);
 
 } // GroupDecisionSession

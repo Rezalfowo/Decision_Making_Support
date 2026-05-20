@@ -99,17 +99,17 @@ ruleGroupDecisionSession returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGroupDecisionSessionAccess().getConceptLibDesRunParserRuleCall_1_0());
+					newCompositeNode(grammarAccess.getGroupDecisionSessionAccess().getDecisionSupportLibDesRunParserRuleCall_1_0());
 				}
-				lv_concept_1_0=ruleLibDesRun
+				lv_decisionSupport_1_0=ruleLibDesRun
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGroupDecisionSessionRule());
 					}
 					set(
 						$current,
-						"concept",
-						lv_concept_1_0,
+						"decisionSupport",
+						lv_decisionSupport_1_0,
 						"xtext.Decisionmaking.LibDesRun");
 					afterParserOrEnumRuleCall();
 				}
@@ -422,18 +422,18 @@ ruleStrategy returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getStrategyAccess().getSolutionSelectedChosenSolutionSelectionKindEnumRuleCall_3_0());
+					newCompositeNode(grammarAccess.getStrategyAccess().getPreferenceIndicationPreferenceIndicationKindEnumRuleCall_3_0());
 				}
-				lv_solutionSelectedChosen_3_0=ruleSolutionSelectionKind
+				lv_preferenceIndication_3_0=rulePreferenceIndicationKind
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getStrategyRule());
 					}
 					set(
 						$current,
-						"solutionSelectedChosen",
-						lv_solutionSelectedChosen_3_0,
-						"xtext.Decisionmaking.SolutionSelectionKind");
+						"preferenceIndication",
+						lv_preferenceIndication_3_0,
+						"xtext.Decisionmaking.PreferenceIndicationKind");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -840,18 +840,18 @@ ruleDecisionRule returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getDecisionRuleAccess().getSolutionselectionacceptedSolutionSelectionKindEnumRuleCall_3_0());
+					newCompositeNode(grammarAccess.getDecisionRuleAccess().getPrefIndAcceptedPreferenceIndicationKindEnumRuleCall_3_0());
 				}
-				lv_solutionselectionaccepted_3_0=ruleSolutionSelectionKind
+				lv_prefIndAccepted_3_0=rulePreferenceIndicationKind
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getDecisionRuleRule());
 					}
 					add(
 						$current,
-						"solutionselectionaccepted",
-						lv_solutionselectionaccepted_3_0,
-						"xtext.Decisionmaking.SolutionSelectionKind");
+						"prefIndAccepted",
+						lv_prefIndAccepted_3_0,
+						"xtext.Decisionmaking.PreferenceIndicationKind");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -926,18 +926,18 @@ ruleAlgorithm returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getAlgorithmAccess().getSolutionselectionacceptedSolutionSelectionKindEnumRuleCall_3_0());
+					newCompositeNode(grammarAccess.getAlgorithmAccess().getPrefIndAcceptedPreferenceIndicationKindEnumRuleCall_3_0());
 				}
-				lv_solutionselectionaccepted_3_0=ruleSolutionSelectionKind
+				lv_prefIndAccepted_3_0=rulePreferenceIndicationKind
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getAlgorithmRule());
 					}
 					add(
 						$current,
-						"solutionselectionaccepted",
-						lv_solutionselectionaccepted_3_0,
-						"xtext.Decisionmaking.SolutionSelectionKind");
+						"prefIndAccepted",
+						lv_prefIndAccepted_3_0,
+						"xtext.Decisionmaking.PreferenceIndicationKind");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -1181,9 +1181,9 @@ ruleStrat returns [EObject current=null]
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getStratAccess().getSolutionSelectedChosenSolutionSelectionKindEnumRuleCall_1_3_0());
+						newCompositeNode(grammarAccess.getStratAccess().getSolutionSelectedChosenPreferenceIndicationKindEnumRuleCall_1_3_0());
 					}
-					lv_solutionSelectedChosen_4_0=ruleSolutionSelectionKind
+					lv_solutionSelectedChosen_4_0=rulePreferenceIndicationKind
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getStratRule());
@@ -1192,7 +1192,7 @@ ruleStrat returns [EObject current=null]
 							$current,
 							"solutionSelectedChosen",
 							lv_solutionSelectedChosen_4_0,
-							"xtext.Decisionmaking.SolutionSelectionKind");
+							"xtext.Decisionmaking.PreferenceIndicationKind");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -1557,8 +1557,8 @@ ruleQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleT
 	)
 ;
 
-// Rule SolutionSelectionKind
-ruleSolutionSelectionKind returns [Enumerator current=null]
+// Rule PreferenceIndicationKind
+rulePreferenceIndicationKind returns [Enumerator current=null]
 @init {
 	enterRule();
 }
@@ -1569,24 +1569,24 @@ ruleSolutionSelectionKind returns [Enumerator current=null]
 		(
 			enumLiteral_0='Ranking'
 			{
-				$current = grammarAccess.getSolutionSelectionKindAccess().getRankingEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_0, grammarAccess.getSolutionSelectionKindAccess().getRankingEnumLiteralDeclaration_0());
+				$current = grammarAccess.getPreferenceIndicationKindAccess().getRankingEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_0, grammarAccess.getPreferenceIndicationKindAccess().getRankingEnumLiteralDeclaration_0());
 			}
 		)
 		    |
 		(
 			enumLiteral_1='Rating'
 			{
-				$current = grammarAccess.getSolutionSelectionKindAccess().getRatingEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_1, grammarAccess.getSolutionSelectionKindAccess().getRatingEnumLiteralDeclaration_1());
+				$current = grammarAccess.getPreferenceIndicationKindAccess().getRatingEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_1, grammarAccess.getPreferenceIndicationKindAccess().getRatingEnumLiteralDeclaration_1());
 			}
 		)
 		    |
 		(
 			enumLiteral_2='YesNo'
 			{
-				$current = grammarAccess.getSolutionSelectionKindAccess().getYesnoEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_2, grammarAccess.getSolutionSelectionKindAccess().getYesnoEnumLiteralDeclaration_2());
+				$current = grammarAccess.getPreferenceIndicationKindAccess().getYesnoEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_2, grammarAccess.getPreferenceIndicationKindAccess().getYesnoEnumLiteralDeclaration_2());
 			}
 		)
 	)

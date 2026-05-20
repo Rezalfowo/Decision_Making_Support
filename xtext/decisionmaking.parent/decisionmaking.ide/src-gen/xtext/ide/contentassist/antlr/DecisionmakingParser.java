@@ -35,7 +35,7 @@ public class DecisionmakingParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getRuleAccess().getAlternatives(), "rule__Rule__Alternatives");
 			builder.put(grammarAccess.getPredefinedRuleAccess().getAlternatives(), "rule__PredefinedRule__Alternatives");
 			builder.put(grammarAccess.getStratAccess().getAlternatives(), "rule__Strat__Alternatives");
-			builder.put(grammarAccess.getSolutionSelectionKindAccess().getAlternatives(), "rule__SolutionSelectionKind__Alternatives");
+			builder.put(grammarAccess.getPreferenceIndicationKindAccess().getAlternatives(), "rule__PreferenceIndicationKind__Alternatives");
 			builder.put(grammarAccess.getBOOLEANAccess().getAlternatives(), "rule__BOOLEAN__Alternatives");
 			builder.put(grammarAccess.getGroupDecisionSessionAccess().getGroup(), "rule__GroupDecisionSession__Group__0");
 			builder.put(grammarAccess.getImportAccess().getGroup(), "rule__Import__Group__0");
@@ -60,7 +60,7 @@ public class DecisionmakingParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getQualifiedNameAccess().getGroup(), "rule__QualifiedName__Group__0");
 			builder.put(grammarAccess.getQualifiedNameAccess().getGroup_1(), "rule__QualifiedName__Group_1__0");
 			builder.put(grammarAccess.getGroupDecisionSessionAccess().getImportsAssignment_0(), "rule__GroupDecisionSession__ImportsAssignment_0");
-			builder.put(grammarAccess.getGroupDecisionSessionAccess().getConceptAssignment_1(), "rule__GroupDecisionSession__ConceptAssignment_1");
+			builder.put(grammarAccess.getGroupDecisionSessionAccess().getDecisionSupportAssignment_1(), "rule__GroupDecisionSession__DecisionSupportAssignment_1");
 			builder.put(grammarAccess.getLibDesRunAccess().getLibraryAssignment_0(), "rule__LibDesRun__LibraryAssignment_0");
 			builder.put(grammarAccess.getLibDesRunAccess().getDesigntimeAssignment_1(), "rule__LibDesRun__DesigntimeAssignment_1");
 			builder.put(grammarAccess.getLibDesRunAccess().getRuntimeAssignment_2(), "rule__LibDesRun__RuntimeAssignment_2");
@@ -70,7 +70,7 @@ public class DecisionmakingParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getLibraryAccess().getAlgorithmsAssignment_1(), "rule__Library__AlgorithmsAssignment_1");
 			builder.put(grammarAccess.getLibraryAccess().getStrategiesAssignment_2(), "rule__Library__StrategiesAssignment_2");
 			builder.put(grammarAccess.getStrategyAccess().getNameAssignment_1(), "rule__Strategy__NameAssignment_1");
-			builder.put(grammarAccess.getStrategyAccess().getSolutionSelectedChosenAssignment_3(), "rule__Strategy__SolutionSelectedChosenAssignment_3");
+			builder.put(grammarAccess.getStrategyAccess().getPreferenceIndicationAssignment_3(), "rule__Strategy__PreferenceIndicationAssignment_3");
 			builder.put(grammarAccess.getStrategyAccess().getRulesAssignment_5(), "rule__Strategy__RulesAssignment_5");
 			builder.put(grammarAccess.getStrategyAccess().getRulesAssignment_6_1(), "rule__Strategy__RulesAssignment_6_1");
 			builder.put(grammarAccess.getStrategyPredefinedAccess().getNameAssignment_1(), "rule__StrategyPredefined__NameAssignment_1");
@@ -81,10 +81,10 @@ public class DecisionmakingParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getPredefinedDecisionRuleAccess().getDecisionruleAssignment_1(), "rule__PredefinedDecisionRule__DecisionruleAssignment_1");
 			builder.put(grammarAccess.getStrategyAlgorithmAccess().getAlgorithmAssignment_1(), "rule__StrategyAlgorithm__AlgorithmAssignment_1");
 			builder.put(grammarAccess.getDecisionRuleAccess().getNameAssignment_1(), "rule__DecisionRule__NameAssignment_1");
-			builder.put(grammarAccess.getDecisionRuleAccess().getSolutionselectionacceptedAssignment_3(), "rule__DecisionRule__SolutionselectionacceptedAssignment_3");
+			builder.put(grammarAccess.getDecisionRuleAccess().getPrefIndAcceptedAssignment_3(), "rule__DecisionRule__PrefIndAcceptedAssignment_3");
 			builder.put(grammarAccess.getDecisionRuleAccess().getDescriptionAssignment_5(), "rule__DecisionRule__DescriptionAssignment_5");
 			builder.put(grammarAccess.getAlgorithmAccess().getNameAssignment_1(), "rule__Algorithm__NameAssignment_1");
-			builder.put(grammarAccess.getAlgorithmAccess().getSolutionselectionacceptedAssignment_3(), "rule__Algorithm__SolutionselectionacceptedAssignment_3");
+			builder.put(grammarAccess.getAlgorithmAccess().getPrefIndAcceptedAssignment_3(), "rule__Algorithm__PrefIndAcceptedAssignment_3");
 			builder.put(grammarAccess.getAlgorithmAccess().getConsidersTPAssignment_6(), "rule__Algorithm__ConsidersTPAssignment_6");
 			builder.put(grammarAccess.getAlgorithmAccess().getDescriptionAssignment_7(), "rule__Algorithm__DescriptionAssignment_7");
 			builder.put(grammarAccess.getDesignTimeAccess().getDecisionsupportAssignment_2(), "rule__DesignTime__DecisionsupportAssignment_2");

@@ -78,13 +78,13 @@ public interface DecisionmakingPackage extends EPackage
   int GROUP_DECISION_SESSION__IMPORTS = 0;
 
   /**
-   * The feature id for the '<em><b>Concept</b></em>' containment reference.
+   * The feature id for the '<em><b>Decision Support</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int GROUP_DECISION_SESSION__CONCEPT = 1;
+  int GROUP_DECISION_SESSION__DECISION_SUPPORT = 1;
 
   /**
    * The number of structural features of the '<em>Group Decision Session</em>' class.
@@ -317,13 +317,22 @@ public interface DecisionmakingPackage extends EPackage
   int STRATEGY__NAME = STRAT_FEATURE_COUNT + 0;
 
   /**
+   * The feature id for the '<em><b>Preference Indication</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRATEGY__PREFERENCE_INDICATION = STRAT_FEATURE_COUNT + 1;
+
+  /**
    * The feature id for the '<em><b>Rules</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int STRATEGY__RULES = STRAT_FEATURE_COUNT + 1;
+  int STRATEGY__RULES = STRAT_FEATURE_COUNT + 2;
 
   /**
    * The number of structural features of the '<em>Strategy</em>' class.
@@ -332,7 +341,7 @@ public interface DecisionmakingPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STRATEGY_FEATURE_COUNT = STRAT_FEATURE_COUNT + 2;
+  int STRATEGY_FEATURE_COUNT = STRAT_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link xtext.decisionmaking.impl.StrategyPredefinedImpl <em>Strategy Predefined</em>}' class.
@@ -522,13 +531,13 @@ public interface DecisionmakingPackage extends EPackage
   int DECISION_RULE__NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Solutionselectionaccepted</b></em>' attribute list.
+   * The feature id for the '<em><b>Pref Ind Accepted</b></em>' attribute list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DECISION_RULE__SOLUTIONSELECTIONACCEPTED = 1;
+  int DECISION_RULE__PREF_IND_ACCEPTED = 1;
 
   /**
    * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -568,13 +577,13 @@ public interface DecisionmakingPackage extends EPackage
   int ALGORITHM__NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Solutionselectionaccepted</b></em>' attribute list.
+   * The feature id for the '<em><b>Pref Ind Accepted</b></em>' attribute list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ALGORITHM__SOLUTIONSELECTIONACCEPTED = 1;
+  int ALGORITHM__PREF_IND_ACCEPTED = 1;
 
   /**
    * The feature id for the '<em><b>Considers TP</b></em>' attribute.
@@ -844,14 +853,14 @@ public interface DecisionmakingPackage extends EPackage
   int PREFERENCE_FEATURE_COUNT = 3;
 
   /**
-   * The meta object id for the '{@link xtext.decisionmaking.SolutionSelectionKind <em>Solution Selection Kind</em>}' enum.
+   * The meta object id for the '{@link xtext.decisionmaking.PreferenceIndicationKind <em>Preference Indication Kind</em>}' enum.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see xtext.decisionmaking.SolutionSelectionKind
-   * @see xtext.decisionmaking.impl.DecisionmakingPackageImpl#getSolutionSelectionKind()
+   * @see xtext.decisionmaking.PreferenceIndicationKind
+   * @see xtext.decisionmaking.impl.DecisionmakingPackageImpl#getPreferenceIndicationKind()
    * @generated
    */
-  int SOLUTION_SELECTION_KIND = 20;
+  int PREFERENCE_INDICATION_KIND = 20;
 
   /**
    * The meta object id for the '{@link xtext.decisionmaking.BOOLEAN <em>BOOLEAN</em>}' enum.
@@ -886,15 +895,15 @@ public interface DecisionmakingPackage extends EPackage
   EReference getGroupDecisionSession_Imports();
 
   /**
-   * Returns the meta object for the containment reference '{@link xtext.decisionmaking.GroupDecisionSession#getConcept <em>Concept</em>}'.
+   * Returns the meta object for the containment reference '{@link xtext.decisionmaking.GroupDecisionSession#getDecisionSupport <em>Decision Support</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Concept</em>'.
-   * @see xtext.decisionmaking.GroupDecisionSession#getConcept()
+   * @return the meta object for the containment reference '<em>Decision Support</em>'.
+   * @see xtext.decisionmaking.GroupDecisionSession#getDecisionSupport()
    * @see #getGroupDecisionSession()
    * @generated
    */
-  EReference getGroupDecisionSession_Concept();
+  EReference getGroupDecisionSession_DecisionSupport();
 
   /**
    * Returns the meta object for class '{@link xtext.decisionmaking.LibDesRun <em>Lib Des Run</em>}'.
@@ -1034,6 +1043,17 @@ public interface DecisionmakingPackage extends EPackage
    * @generated
    */
   EAttribute getStrategy_Name();
+
+  /**
+   * Returns the meta object for the attribute '{@link xtext.decisionmaking.Strategy#getPreferenceIndication <em>Preference Indication</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Preference Indication</em>'.
+   * @see xtext.decisionmaking.Strategy#getPreferenceIndication()
+   * @see #getStrategy()
+   * @generated
+   */
+  EAttribute getStrategy_PreferenceIndication();
 
   /**
    * Returns the meta object for the containment reference list '{@link xtext.decisionmaking.Strategy#getRules <em>Rules</em>}'.
@@ -1194,15 +1214,15 @@ public interface DecisionmakingPackage extends EPackage
   EAttribute getDecisionRule_Name();
 
   /**
-   * Returns the meta object for the attribute list '{@link xtext.decisionmaking.DecisionRule#getSolutionselectionaccepted <em>Solutionselectionaccepted</em>}'.
+   * Returns the meta object for the attribute list '{@link xtext.decisionmaking.DecisionRule#getPrefIndAccepted <em>Pref Ind Accepted</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Solutionselectionaccepted</em>'.
-   * @see xtext.decisionmaking.DecisionRule#getSolutionselectionaccepted()
+   * @return the meta object for the attribute list '<em>Pref Ind Accepted</em>'.
+   * @see xtext.decisionmaking.DecisionRule#getPrefIndAccepted()
    * @see #getDecisionRule()
    * @generated
    */
-  EAttribute getDecisionRule_Solutionselectionaccepted();
+  EAttribute getDecisionRule_PrefIndAccepted();
 
   /**
    * Returns the meta object for the attribute '{@link xtext.decisionmaking.DecisionRule#getDescription <em>Description</em>}'.
@@ -1237,15 +1257,15 @@ public interface DecisionmakingPackage extends EPackage
   EAttribute getAlgorithm_Name();
 
   /**
-   * Returns the meta object for the attribute list '{@link xtext.decisionmaking.Algorithm#getSolutionselectionaccepted <em>Solutionselectionaccepted</em>}'.
+   * Returns the meta object for the attribute list '{@link xtext.decisionmaking.Algorithm#getPrefIndAccepted <em>Pref Ind Accepted</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Solutionselectionaccepted</em>'.
-   * @see xtext.decisionmaking.Algorithm#getSolutionselectionaccepted()
+   * @return the meta object for the attribute list '<em>Pref Ind Accepted</em>'.
+   * @see xtext.decisionmaking.Algorithm#getPrefIndAccepted()
    * @see #getAlgorithm()
    * @generated
    */
-  EAttribute getAlgorithm_Solutionselectionaccepted();
+  EAttribute getAlgorithm_PrefIndAccepted();
 
   /**
    * Returns the meta object for the attribute '{@link xtext.decisionmaking.Algorithm#getConsidersTP <em>Considers TP</em>}'.
@@ -1527,14 +1547,14 @@ public interface DecisionmakingPackage extends EPackage
   EAttribute getPreference_Rationale();
 
   /**
-   * Returns the meta object for enum '{@link xtext.decisionmaking.SolutionSelectionKind <em>Solution Selection Kind</em>}'.
+   * Returns the meta object for enum '{@link xtext.decisionmaking.PreferenceIndicationKind <em>Preference Indication Kind</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for enum '<em>Solution Selection Kind</em>'.
-   * @see xtext.decisionmaking.SolutionSelectionKind
+   * @return the meta object for enum '<em>Preference Indication Kind</em>'.
+   * @see xtext.decisionmaking.PreferenceIndicationKind
    * @generated
    */
-  EEnum getSolutionSelectionKind();
+  EEnum getPreferenceIndicationKind();
 
   /**
    * Returns the meta object for enum '{@link xtext.decisionmaking.BOOLEAN <em>BOOLEAN</em>}'.
@@ -1588,12 +1608,12 @@ public interface DecisionmakingPackage extends EPackage
     EReference GROUP_DECISION_SESSION__IMPORTS = eINSTANCE.getGroupDecisionSession_Imports();
 
     /**
-     * The meta object literal for the '<em><b>Concept</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Decision Support</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference GROUP_DECISION_SESSION__CONCEPT = eINSTANCE.getGroupDecisionSession_Concept();
+    EReference GROUP_DECISION_SESSION__DECISION_SUPPORT = eINSTANCE.getGroupDecisionSession_DecisionSupport();
 
     /**
      * The meta object literal for the '{@link xtext.decisionmaking.impl.LibDesRunImpl <em>Lib Des Run</em>}' class.
@@ -1706,6 +1726,14 @@ public interface DecisionmakingPackage extends EPackage
      * @generated
      */
     EAttribute STRATEGY__NAME = eINSTANCE.getStrategy_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Preference Indication</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute STRATEGY__PREFERENCE_INDICATION = eINSTANCE.getStrategy_PreferenceIndication();
 
     /**
      * The meta object literal for the '<em><b>Rules</b></em>' containment reference list feature.
@@ -1842,12 +1870,12 @@ public interface DecisionmakingPackage extends EPackage
     EAttribute DECISION_RULE__NAME = eINSTANCE.getDecisionRule_Name();
 
     /**
-     * The meta object literal for the '<em><b>Solutionselectionaccepted</b></em>' attribute list feature.
+     * The meta object literal for the '<em><b>Pref Ind Accepted</b></em>' attribute list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute DECISION_RULE__SOLUTIONSELECTIONACCEPTED = eINSTANCE.getDecisionRule_Solutionselectionaccepted();
+    EAttribute DECISION_RULE__PREF_IND_ACCEPTED = eINSTANCE.getDecisionRule_PrefIndAccepted();
 
     /**
      * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
@@ -1876,12 +1904,12 @@ public interface DecisionmakingPackage extends EPackage
     EAttribute ALGORITHM__NAME = eINSTANCE.getAlgorithm_Name();
 
     /**
-     * The meta object literal for the '<em><b>Solutionselectionaccepted</b></em>' attribute list feature.
+     * The meta object literal for the '<em><b>Pref Ind Accepted</b></em>' attribute list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute ALGORITHM__SOLUTIONSELECTIONACCEPTED = eINSTANCE.getAlgorithm_Solutionselectionaccepted();
+    EAttribute ALGORITHM__PREF_IND_ACCEPTED = eINSTANCE.getAlgorithm_PrefIndAccepted();
 
     /**
      * The meta object literal for the '<em><b>Considers TP</b></em>' attribute feature.
@@ -2106,14 +2134,14 @@ public interface DecisionmakingPackage extends EPackage
     EAttribute PREFERENCE__RATIONALE = eINSTANCE.getPreference_Rationale();
 
     /**
-     * The meta object literal for the '{@link xtext.decisionmaking.SolutionSelectionKind <em>Solution Selection Kind</em>}' enum.
+     * The meta object literal for the '{@link xtext.decisionmaking.PreferenceIndicationKind <em>Preference Indication Kind</em>}' enum.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see xtext.decisionmaking.SolutionSelectionKind
-     * @see xtext.decisionmaking.impl.DecisionmakingPackageImpl#getSolutionSelectionKind()
+     * @see xtext.decisionmaking.PreferenceIndicationKind
+     * @see xtext.decisionmaking.impl.DecisionmakingPackageImpl#getPreferenceIndicationKind()
      * @generated
      */
-    EEnum SOLUTION_SELECTION_KIND = eINSTANCE.getSolutionSelectionKind();
+    EEnum PREFERENCE_INDICATION_KIND = eINSTANCE.getPreferenceIndicationKind();
 
     /**
      * The meta object literal for the '{@link xtext.decisionmaking.BOOLEAN <em>BOOLEAN</em>}' enum.

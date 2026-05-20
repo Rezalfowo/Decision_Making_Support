@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import xtext.decisionmaking.DecisionmakingPackage;
+import xtext.decisionmaking.PreferenceIndicationKind;
 import xtext.decisionmaking.Rule;
 import xtext.decisionmaking.Strategy;
 
@@ -31,6 +32,7 @@ import xtext.decisionmaking.Strategy;
  * </p>
  * <ul>
  *   <li>{@link xtext.decisionmaking.impl.StrategyImpl#getName <em>Name</em>}</li>
+ *   <li>{@link xtext.decisionmaking.impl.StrategyImpl#getPreferenceIndication <em>Preference Indication</em>}</li>
  *   <li>{@link xtext.decisionmaking.impl.StrategyImpl#getRules <em>Rules</em>}</li>
  * </ul>
  *
@@ -57,6 +59,26 @@ public class StrategyImpl extends StratImpl implements Strategy
    * @ordered
    */
   protected String name = NAME_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getPreferenceIndication() <em>Preference Indication</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getPreferenceIndication()
+   * @generated
+   * @ordered
+   */
+  protected static final PreferenceIndicationKind PREFERENCE_INDICATION_EDEFAULT = PreferenceIndicationKind.RANKING;
+
+  /**
+   * The cached value of the '{@link #getPreferenceIndication() <em>Preference Indication</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getPreferenceIndication()
+   * @generated
+   * @ordered
+   */
+  protected PreferenceIndicationKind preferenceIndication = PREFERENCE_INDICATION_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getRules() <em>Rules</em>}' containment reference list.
@@ -120,6 +142,31 @@ public class StrategyImpl extends StratImpl implements Strategy
    * @generated
    */
   @Override
+  public PreferenceIndicationKind getPreferenceIndication()
+  {
+    return preferenceIndication;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setPreferenceIndication(PreferenceIndicationKind newPreferenceIndication)
+  {
+    PreferenceIndicationKind oldPreferenceIndication = preferenceIndication;
+    preferenceIndication = newPreferenceIndication == null ? PREFERENCE_INDICATION_EDEFAULT : newPreferenceIndication;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, DecisionmakingPackage.STRATEGY__PREFERENCE_INDICATION, oldPreferenceIndication, preferenceIndication));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public EList<Rule> getRules()
   {
     if (rules == null)
@@ -157,6 +204,8 @@ public class StrategyImpl extends StratImpl implements Strategy
     {
       case DecisionmakingPackage.STRATEGY__NAME:
         return getName();
+      case DecisionmakingPackage.STRATEGY__PREFERENCE_INDICATION:
+        return getPreferenceIndication();
       case DecisionmakingPackage.STRATEGY__RULES:
         return getRules();
     }
@@ -176,6 +225,9 @@ public class StrategyImpl extends StratImpl implements Strategy
     {
       case DecisionmakingPackage.STRATEGY__NAME:
         setName((String)newValue);
+        return;
+      case DecisionmakingPackage.STRATEGY__PREFERENCE_INDICATION:
+        setPreferenceIndication((PreferenceIndicationKind)newValue);
         return;
       case DecisionmakingPackage.STRATEGY__RULES:
         getRules().clear();
@@ -198,6 +250,9 @@ public class StrategyImpl extends StratImpl implements Strategy
       case DecisionmakingPackage.STRATEGY__NAME:
         setName(NAME_EDEFAULT);
         return;
+      case DecisionmakingPackage.STRATEGY__PREFERENCE_INDICATION:
+        setPreferenceIndication(PREFERENCE_INDICATION_EDEFAULT);
+        return;
       case DecisionmakingPackage.STRATEGY__RULES:
         getRules().clear();
         return;
@@ -217,6 +272,8 @@ public class StrategyImpl extends StratImpl implements Strategy
     {
       case DecisionmakingPackage.STRATEGY__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case DecisionmakingPackage.STRATEGY__PREFERENCE_INDICATION:
+        return preferenceIndication != PREFERENCE_INDICATION_EDEFAULT;
       case DecisionmakingPackage.STRATEGY__RULES:
         return rules != null && !rules.isEmpty();
     }
@@ -236,6 +293,8 @@ public class StrategyImpl extends StratImpl implements Strategy
     StringBuilder result = new StringBuilder(super.toString());
     result.append(" (name: ");
     result.append(name);
+    result.append(", preferenceIndication: ");
+    result.append(preferenceIndication);
     result.append(')');
     return result.toString();
   }

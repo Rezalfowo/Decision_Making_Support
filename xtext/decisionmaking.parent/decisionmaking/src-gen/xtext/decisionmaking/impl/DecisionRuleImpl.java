@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
 
 import xtext.decisionmaking.DecisionRule;
 import xtext.decisionmaking.DecisionmakingPackage;
-import xtext.decisionmaking.SolutionSelectionKind;
+import xtext.decisionmaking.PreferenceIndicationKind;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,7 +29,7 @@ import xtext.decisionmaking.SolutionSelectionKind;
  * </p>
  * <ul>
  *   <li>{@link xtext.decisionmaking.impl.DecisionRuleImpl#getName <em>Name</em>}</li>
- *   <li>{@link xtext.decisionmaking.impl.DecisionRuleImpl#getSolutionselectionaccepted <em>Solutionselectionaccepted</em>}</li>
+ *   <li>{@link xtext.decisionmaking.impl.DecisionRuleImpl#getPrefIndAccepted <em>Pref Ind Accepted</em>}</li>
  *   <li>{@link xtext.decisionmaking.impl.DecisionRuleImpl#getDescription <em>Description</em>}</li>
  * </ul>
  *
@@ -58,14 +58,14 @@ public class DecisionRuleImpl extends MinimalEObjectImpl.Container implements De
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getSolutionselectionaccepted() <em>Solutionselectionaccepted</em>}' attribute list.
+   * The cached value of the '{@link #getPrefIndAccepted() <em>Pref Ind Accepted</em>}' attribute list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getSolutionselectionaccepted()
+   * @see #getPrefIndAccepted()
    * @generated
    * @ordered
    */
-  protected EList<SolutionSelectionKind> solutionselectionaccepted;
+  protected EList<PreferenceIndicationKind> prefIndAccepted;
 
   /**
    * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
@@ -139,13 +139,13 @@ public class DecisionRuleImpl extends MinimalEObjectImpl.Container implements De
    * @generated
    */
   @Override
-  public EList<SolutionSelectionKind> getSolutionselectionaccepted()
+  public EList<PreferenceIndicationKind> getPrefIndAccepted()
   {
-    if (solutionselectionaccepted == null)
+    if (prefIndAccepted == null)
     {
-      solutionselectionaccepted = new EDataTypeEList<SolutionSelectionKind>(SolutionSelectionKind.class, this, DecisionmakingPackage.DECISION_RULE__SOLUTIONSELECTIONACCEPTED);
+      prefIndAccepted = new EDataTypeEList<PreferenceIndicationKind>(PreferenceIndicationKind.class, this, DecisionmakingPackage.DECISION_RULE__PREF_IND_ACCEPTED);
     }
-    return solutionselectionaccepted;
+    return prefIndAccepted;
   }
 
   /**
@@ -185,8 +185,8 @@ public class DecisionRuleImpl extends MinimalEObjectImpl.Container implements De
     {
       case DecisionmakingPackage.DECISION_RULE__NAME:
         return getName();
-      case DecisionmakingPackage.DECISION_RULE__SOLUTIONSELECTIONACCEPTED:
-        return getSolutionselectionaccepted();
+      case DecisionmakingPackage.DECISION_RULE__PREF_IND_ACCEPTED:
+        return getPrefIndAccepted();
       case DecisionmakingPackage.DECISION_RULE__DESCRIPTION:
         return getDescription();
     }
@@ -207,9 +207,9 @@ public class DecisionRuleImpl extends MinimalEObjectImpl.Container implements De
       case DecisionmakingPackage.DECISION_RULE__NAME:
         setName((String)newValue);
         return;
-      case DecisionmakingPackage.DECISION_RULE__SOLUTIONSELECTIONACCEPTED:
-        getSolutionselectionaccepted().clear();
-        getSolutionselectionaccepted().addAll((Collection<? extends SolutionSelectionKind>)newValue);
+      case DecisionmakingPackage.DECISION_RULE__PREF_IND_ACCEPTED:
+        getPrefIndAccepted().clear();
+        getPrefIndAccepted().addAll((Collection<? extends PreferenceIndicationKind>)newValue);
         return;
       case DecisionmakingPackage.DECISION_RULE__DESCRIPTION:
         setDescription((String)newValue);
@@ -231,8 +231,8 @@ public class DecisionRuleImpl extends MinimalEObjectImpl.Container implements De
       case DecisionmakingPackage.DECISION_RULE__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case DecisionmakingPackage.DECISION_RULE__SOLUTIONSELECTIONACCEPTED:
-        getSolutionselectionaccepted().clear();
+      case DecisionmakingPackage.DECISION_RULE__PREF_IND_ACCEPTED:
+        getPrefIndAccepted().clear();
         return;
       case DecisionmakingPackage.DECISION_RULE__DESCRIPTION:
         setDescription(DESCRIPTION_EDEFAULT);
@@ -253,8 +253,8 @@ public class DecisionRuleImpl extends MinimalEObjectImpl.Container implements De
     {
       case DecisionmakingPackage.DECISION_RULE__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case DecisionmakingPackage.DECISION_RULE__SOLUTIONSELECTIONACCEPTED:
-        return solutionselectionaccepted != null && !solutionselectionaccepted.isEmpty();
+      case DecisionmakingPackage.DECISION_RULE__PREF_IND_ACCEPTED:
+        return prefIndAccepted != null && !prefIndAccepted.isEmpty();
       case DecisionmakingPackage.DECISION_RULE__DESCRIPTION:
         return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
     }
@@ -274,8 +274,8 @@ public class DecisionRuleImpl extends MinimalEObjectImpl.Container implements De
     StringBuilder result = new StringBuilder(super.toString());
     result.append(" (name: ");
     result.append(name);
-    result.append(", solutionselectionaccepted: ");
-    result.append(solutionselectionaccepted);
+    result.append(", prefIndAccepted: ");
+    result.append(prefIndAccepted);
     result.append(", description: ");
     result.append(description);
     result.append(')');

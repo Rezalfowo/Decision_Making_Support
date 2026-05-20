@@ -101,8 +101,8 @@ public class DecisionmakingFactoryImpl extends EFactoryImpl implements Decisionm
   {
     switch (eDataType.getClassifierID())
     {
-      case DecisionmakingPackage.SOLUTION_SELECTION_KIND:
-        return createSolutionSelectionKindFromString(eDataType, initialValue);
+      case DecisionmakingPackage.PREFERENCE_INDICATION_KIND:
+        return createPreferenceIndicationKindFromString(eDataType, initialValue);
       case DecisionmakingPackage.BOOLEAN:
         return createBOOLEANFromString(eDataType, initialValue);
       default:
@@ -120,8 +120,8 @@ public class DecisionmakingFactoryImpl extends EFactoryImpl implements Decisionm
   {
     switch (eDataType.getClassifierID())
     {
-      case DecisionmakingPackage.SOLUTION_SELECTION_KIND:
-        return convertSolutionSelectionKindToString(eDataType, instanceValue);
+      case DecisionmakingPackage.PREFERENCE_INDICATION_KIND:
+        return convertPreferenceIndicationKindToString(eDataType, instanceValue);
       case DecisionmakingPackage.BOOLEAN:
         return convertBOOLEANToString(eDataType, instanceValue);
       default:
@@ -374,9 +374,9 @@ public class DecisionmakingFactoryImpl extends EFactoryImpl implements Decisionm
    * <!-- end-user-doc -->
    * @generated
    */
-  public SolutionSelectionKind createSolutionSelectionKindFromString(EDataType eDataType, String initialValue)
+  public PreferenceIndicationKind createPreferenceIndicationKindFromString(EDataType eDataType, String initialValue)
   {
-    SolutionSelectionKind result = SolutionSelectionKind.get(initialValue);
+    PreferenceIndicationKind result = PreferenceIndicationKind.get(initialValue);
     if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
     return result;
   }
@@ -386,7 +386,7 @@ public class DecisionmakingFactoryImpl extends EFactoryImpl implements Decisionm
    * <!-- end-user-doc -->
    * @generated
    */
-  public String convertSolutionSelectionKindToString(EDataType eDataType, Object instanceValue)
+  public String convertPreferenceIndicationKindToString(EDataType eDataType, Object instanceValue)
   {
     return instanceValue == null ? null : instanceValue.toString();
   }

@@ -31,17 +31,17 @@ public class DecisionmakingGrammarAccess extends AbstractElementFinder.AbstractG
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cImportsAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final RuleCall cImportsImportParserRuleCall_0_0 = (RuleCall)cImportsAssignment_0.eContents().get(0);
-		private final Assignment cConceptAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cConceptLibDesRunParserRuleCall_1_0 = (RuleCall)cConceptAssignment_1.eContents().get(0);
+		private final Assignment cDecisionSupportAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cDecisionSupportLibDesRunParserRuleCall_1_0 = (RuleCall)cDecisionSupportAssignment_1.eContents().get(0);
 		
 		//GroupDecisionSession:
 		//    (imports+=Import*)
-		//    concept=LibDesRun
+		//    decisionSupport=LibDesRun
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//(imports+=Import*)
-		//concept=LibDesRun
+		//decisionSupport=LibDesRun
 		public Group getGroup() { return cGroup; }
 		
 		//(imports+=Import*)
@@ -50,11 +50,11 @@ public class DecisionmakingGrammarAccess extends AbstractElementFinder.AbstractG
 		//Import
 		public RuleCall getImportsImportParserRuleCall_0_0() { return cImportsImportParserRuleCall_0_0; }
 		
-		//concept=LibDesRun
-		public Assignment getConceptAssignment_1() { return cConceptAssignment_1; }
+		//decisionSupport=LibDesRun
+		public Assignment getDecisionSupportAssignment_1() { return cDecisionSupportAssignment_1; }
 		
 		//LibDesRun
-		public RuleCall getConceptLibDesRunParserRuleCall_1_0() { return cConceptLibDesRunParserRuleCall_1_0; }
+		public RuleCall getDecisionSupportLibDesRunParserRuleCall_1_0() { return cDecisionSupportLibDesRunParserRuleCall_1_0; }
 	}
 	public class LibDesRunElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "xtext.Decisionmaking.LibDesRun");
@@ -186,8 +186,8 @@ public class DecisionmakingGrammarAccess extends AbstractElementFinder.AbstractG
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cWithPreferenceIndicationKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cSolutionSelectedChosenAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cSolutionSelectedChosenSolutionSelectionKindEnumRuleCall_3_0 = (RuleCall)cSolutionSelectedChosenAssignment_3.eContents().get(0);
+		private final Assignment cPreferenceIndicationAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cPreferenceIndicationPreferenceIndicationKindEnumRuleCall_3_0 = (RuleCall)cPreferenceIndicationAssignment_3.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		private final Assignment cRulesAssignment_5 = (Assignment)cGroup.eContents().get(5);
 		private final RuleCall cRulesRuleParserRuleCall_5_0 = (RuleCall)cRulesAssignment_5.eContents().get(0);
@@ -202,12 +202,12 @@ public class DecisionmakingGrammarAccess extends AbstractElementFinder.AbstractG
 		// * Rules are then defined between brackets
 		// */
 		//Strategy:
-		//    'Strategy' name=ID  "withPreferenceIndication" solutionSelectedChosen=SolutionSelectionKind "{"
+		//    'Strategy' name=ID  "withPreferenceIndication" preferenceIndication=PreferenceIndicationKind "{"
 		//    rules+=Rule*    ("then" rules+=Rule*)* "}"
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'Strategy' name=ID  "withPreferenceIndication" solutionSelectedChosen=SolutionSelectionKind "{"
+		//'Strategy' name=ID  "withPreferenceIndication" preferenceIndication=PreferenceIndicationKind "{"
 		//rules+=Rule*    ("then" rules+=Rule*)* "}"
 		public Group getGroup() { return cGroup; }
 		
@@ -223,11 +223,11 @@ public class DecisionmakingGrammarAccess extends AbstractElementFinder.AbstractG
 		//"withPreferenceIndication"
 		public Keyword getWithPreferenceIndicationKeyword_2() { return cWithPreferenceIndicationKeyword_2; }
 		
-		//solutionSelectedChosen=SolutionSelectionKind
-		public Assignment getSolutionSelectedChosenAssignment_3() { return cSolutionSelectedChosenAssignment_3; }
+		//preferenceIndication=PreferenceIndicationKind
+		public Assignment getPreferenceIndicationAssignment_3() { return cPreferenceIndicationAssignment_3; }
 		
-		//SolutionSelectionKind
-		public RuleCall getSolutionSelectedChosenSolutionSelectionKindEnumRuleCall_3_0() { return cSolutionSelectedChosenSolutionSelectionKindEnumRuleCall_3_0; }
+		//PreferenceIndicationKind
+		public RuleCall getPreferenceIndicationPreferenceIndicationKindEnumRuleCall_3_0() { return cPreferenceIndicationPreferenceIndicationKindEnumRuleCall_3_0; }
 		
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_4() { return cLeftCurlyBracketKeyword_4; }
@@ -469,8 +469,8 @@ public class DecisionmakingGrammarAccess extends AbstractElementFinder.AbstractG
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cLeftParenthesisKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cSolutionselectionacceptedAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cSolutionselectionacceptedSolutionSelectionKindEnumRuleCall_3_0 = (RuleCall)cSolutionselectionacceptedAssignment_3.eContents().get(0);
+		private final Assignment cPrefIndAcceptedAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cPrefIndAcceptedPreferenceIndicationKindEnumRuleCall_3_0 = (RuleCall)cPrefIndAcceptedAssignment_3.eContents().get(0);
 		private final Keyword cRightParenthesisKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		private final Assignment cDescriptionAssignment_5 = (Assignment)cGroup.eContents().get(5);
 		private final RuleCall cDescriptionSTRINGTerminalRuleCall_5_0 = (RuleCall)cDescriptionAssignment_5.eContents().get(0);
@@ -479,11 +479,11 @@ public class DecisionmakingGrammarAccess extends AbstractElementFinder.AbstractG
 		// * Definition of a decision rule with its name and a description
 		// */
 		//DecisionRule :
-		//    "decisionrule" name=ID "(" solutionselectionaccepted+=SolutionSelectionKind* ")" description=STRING
+		//    "decisionrule" name=ID "(" prefIndAccepted+=PreferenceIndicationKind* ")" description=STRING
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//"decisionrule" name=ID "(" solutionselectionaccepted+=SolutionSelectionKind* ")" description=STRING
+		//"decisionrule" name=ID "(" prefIndAccepted+=PreferenceIndicationKind* ")" description=STRING
 		public Group getGroup() { return cGroup; }
 		
 		//"decisionrule"
@@ -498,11 +498,11 @@ public class DecisionmakingGrammarAccess extends AbstractElementFinder.AbstractG
 		//"("
 		public Keyword getLeftParenthesisKeyword_2() { return cLeftParenthesisKeyword_2; }
 		
-		//solutionselectionaccepted+=SolutionSelectionKind*
-		public Assignment getSolutionselectionacceptedAssignment_3() { return cSolutionselectionacceptedAssignment_3; }
+		//prefIndAccepted+=PreferenceIndicationKind*
+		public Assignment getPrefIndAcceptedAssignment_3() { return cPrefIndAcceptedAssignment_3; }
 		
-		//SolutionSelectionKind
-		public RuleCall getSolutionselectionacceptedSolutionSelectionKindEnumRuleCall_3_0() { return cSolutionselectionacceptedSolutionSelectionKindEnumRuleCall_3_0; }
+		//PreferenceIndicationKind
+		public RuleCall getPrefIndAcceptedPreferenceIndicationKindEnumRuleCall_3_0() { return cPrefIndAcceptedPreferenceIndicationKindEnumRuleCall_3_0; }
 		
 		//")"
 		public Keyword getRightParenthesisKeyword_4() { return cRightParenthesisKeyword_4; }
@@ -520,8 +520,8 @@ public class DecisionmakingGrammarAccess extends AbstractElementFinder.AbstractG
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cLeftParenthesisKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cSolutionselectionacceptedAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cSolutionselectionacceptedSolutionSelectionKindEnumRuleCall_3_0 = (RuleCall)cSolutionselectionacceptedAssignment_3.eContents().get(0);
+		private final Assignment cPrefIndAcceptedAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cPrefIndAcceptedPreferenceIndicationKindEnumRuleCall_3_0 = (RuleCall)cPrefIndAcceptedAssignment_3.eContents().get(0);
 		private final Keyword cRightParenthesisKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		private final Keyword cConsidersTPKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		private final Assignment cConsidersTPAssignment_6 = (Assignment)cGroup.eContents().get(6);
@@ -533,11 +533,11 @@ public class DecisionmakingGrammarAccess extends AbstractElementFinder.AbstractG
 		// * Definition of an algorithm rule with its name and a description
 		// */
 		//Algorithm :
-		//    "algorithm" name=ID "(" solutionselectionaccepted+=SolutionSelectionKind* ")" "considersTP" considersTP=BOOLEAN description=STRING
+		//    "algorithm" name=ID "(" prefIndAccepted+=PreferenceIndicationKind* ")" "considersTP" considersTP=BOOLEAN description=STRING
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//"algorithm" name=ID "(" solutionselectionaccepted+=SolutionSelectionKind* ")" "considersTP" considersTP=BOOLEAN description=STRING
+		//"algorithm" name=ID "(" prefIndAccepted+=PreferenceIndicationKind* ")" "considersTP" considersTP=BOOLEAN description=STRING
 		public Group getGroup() { return cGroup; }
 		
 		//"algorithm"
@@ -552,11 +552,11 @@ public class DecisionmakingGrammarAccess extends AbstractElementFinder.AbstractG
 		//"("
 		public Keyword getLeftParenthesisKeyword_2() { return cLeftParenthesisKeyword_2; }
 		
-		//solutionselectionaccepted+=SolutionSelectionKind*
-		public Assignment getSolutionselectionacceptedAssignment_3() { return cSolutionselectionacceptedAssignment_3; }
+		//prefIndAccepted+=PreferenceIndicationKind*
+		public Assignment getPrefIndAcceptedAssignment_3() { return cPrefIndAcceptedAssignment_3; }
 		
-		//SolutionSelectionKind
-		public RuleCall getSolutionselectionacceptedSolutionSelectionKindEnumRuleCall_3_0() { return cSolutionselectionacceptedSolutionSelectionKindEnumRuleCall_3_0; }
+		//PreferenceIndicationKind
+		public RuleCall getPrefIndAcceptedPreferenceIndicationKindEnumRuleCall_3_0() { return cPrefIndAcceptedPreferenceIndicationKindEnumRuleCall_3_0; }
 		
 		//")"
 		public Keyword getRightParenthesisKeyword_4() { return cRightParenthesisKeyword_4; }
@@ -683,7 +683,7 @@ public class DecisionmakingGrammarAccess extends AbstractElementFinder.AbstractG
 		private final RuleCall cStratStrategyPredefinedQualifiedNameParserRuleCall_1_1_0_1 = (RuleCall)cStratStrategyPredefinedCrossReference_1_1_0.eContents().get(1);
 		private final Keyword cWithPreferenceIndicationKeyword_1_2 = (Keyword)cGroup_1.eContents().get(2);
 		private final Assignment cSolutionSelectedChosenAssignment_1_3 = (Assignment)cGroup_1.eContents().get(3);
-		private final RuleCall cSolutionSelectedChosenSolutionSelectionKindEnumRuleCall_1_3_0 = (RuleCall)cSolutionSelectedChosenAssignment_1_3.eContents().get(0);
+		private final RuleCall cSolutionSelectedChosenPreferenceIndicationKindEnumRuleCall_1_3_0 = (RuleCall)cSolutionSelectedChosenAssignment_1_3.eContents().get(0);
 		private final Group cGroup_1_4 = (Group)cGroup_1.eContents().get(4);
 		private final Keyword cForKeyword_1_4_0 = (Keyword)cGroup_1_4.eContents().get(0);
 		private final Assignment cTeamprofilesAssignment_1_4_1 = (Assignment)cGroup_1_4.eContents().get(1);
@@ -692,18 +692,18 @@ public class DecisionmakingGrammarAccess extends AbstractElementFinder.AbstractG
 		
 		//Strat :
 		//    Strategy |
-		//    "Strategy" strat=[StrategyPredefined|QualifiedName] "withPreferenceIndication" solutionSelectedChosen=SolutionSelectionKind ("for" teamprofiles+=[TP::Profile|QualifiedName]+)?
+		//    "Strategy" strat=[StrategyPredefined|QualifiedName] "withPreferenceIndication" solutionSelectedChosen=PreferenceIndicationKind ("for" teamprofiles+=[TP::Profile|QualifiedName]+)?
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//Strategy |
-		//"Strategy" strat=[StrategyPredefined|QualifiedName] "withPreferenceIndication" solutionSelectedChosen=SolutionSelectionKind ("for" teamprofiles+=[TP::Profile|QualifiedName]+)?
+		//"Strategy" strat=[StrategyPredefined|QualifiedName] "withPreferenceIndication" solutionSelectedChosen=PreferenceIndicationKind ("for" teamprofiles+=[TP::Profile|QualifiedName]+)?
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//Strategy
 		public RuleCall getStrategyParserRuleCall_0() { return cStrategyParserRuleCall_0; }
 		
-		//"Strategy" strat=[StrategyPredefined|QualifiedName] "withPreferenceIndication" solutionSelectedChosen=SolutionSelectionKind ("for" teamprofiles+=[TP::Profile|QualifiedName]+)?
+		//"Strategy" strat=[StrategyPredefined|QualifiedName] "withPreferenceIndication" solutionSelectedChosen=PreferenceIndicationKind ("for" teamprofiles+=[TP::Profile|QualifiedName]+)?
 		public Group getGroup_1() { return cGroup_1; }
 		
 		//"Strategy"
@@ -721,11 +721,11 @@ public class DecisionmakingGrammarAccess extends AbstractElementFinder.AbstractG
 		//"withPreferenceIndication"
 		public Keyword getWithPreferenceIndicationKeyword_1_2() { return cWithPreferenceIndicationKeyword_1_2; }
 		
-		//solutionSelectedChosen=SolutionSelectionKind
+		//solutionSelectedChosen=PreferenceIndicationKind
 		public Assignment getSolutionSelectedChosenAssignment_1_3() { return cSolutionSelectedChosenAssignment_1_3; }
 		
-		//SolutionSelectionKind
-		public RuleCall getSolutionSelectedChosenSolutionSelectionKindEnumRuleCall_1_3_0() { return cSolutionSelectedChosenSolutionSelectionKindEnumRuleCall_1_3_0; }
+		//PreferenceIndicationKind
+		public RuleCall getSolutionSelectedChosenPreferenceIndicationKindEnumRuleCall_1_3_0() { return cSolutionSelectedChosenPreferenceIndicationKindEnumRuleCall_1_3_0; }
 		
 		//("for" teamprofiles+=[TP::Profile|QualifiedName]+)?
 		public Group getGroup_1_4() { return cGroup_1_4; }
@@ -983,8 +983,8 @@ public class DecisionmakingGrammarAccess extends AbstractElementFinder.AbstractG
 		public RuleCall getIDTerminalRuleCall_1_1() { return cIDTerminalRuleCall_1_1; }
 	}
 	
-	public class SolutionSelectionKindElements extends AbstractElementFinder.AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "xtext.Decisionmaking.SolutionSelectionKind");
+	public class PreferenceIndicationKindElements extends AbstractElementFinder.AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "xtext.Decisionmaking.PreferenceIndicationKind");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cRankingEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
 		private final Keyword cRankingRankingKeyword_0_0 = (Keyword)cRankingEnumLiteralDeclaration_0.eContents().get(0);
@@ -993,7 +993,7 @@ public class DecisionmakingGrammarAccess extends AbstractElementFinder.AbstractG
 		private final EnumLiteralDeclaration cYesnoEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
 		private final Keyword cYesnoYesNoKeyword_2_0 = (Keyword)cYesnoEnumLiteralDeclaration_2.eContents().get(0);
 		
-		//enum SolutionSelectionKind :
+		//enum PreferenceIndicationKind :
 		//    ranking="Ranking" |
 		//    rating="Rating" |
 		//    yesno="YesNo"
@@ -1072,7 +1072,7 @@ public class DecisionmakingGrammarAccess extends AbstractElementFinder.AbstractG
 	private final SADDResultElements pSADDResult;
 	private final AlternativePreferenceElements pAlternativePreference;
 	private final PreferenceElements pPreference;
-	private final SolutionSelectionKindElements eSolutionSelectionKind;
+	private final PreferenceIndicationKindElements ePreferenceIndicationKind;
 	private final QualifiedNameElements pQualifiedName;
 	private final BOOLEANElements eBOOLEAN;
 	
@@ -1105,7 +1105,7 @@ public class DecisionmakingGrammarAccess extends AbstractElementFinder.AbstractG
 		this.pSADDResult = new SADDResultElements();
 		this.pAlternativePreference = new AlternativePreferenceElements();
 		this.pPreference = new PreferenceElements();
-		this.eSolutionSelectionKind = new SolutionSelectionKindElements();
+		this.ePreferenceIndicationKind = new PreferenceIndicationKindElements();
 		this.pQualifiedName = new QualifiedNameElements();
 		this.eBOOLEAN = new BOOLEANElements();
 	}
@@ -1139,7 +1139,7 @@ public class DecisionmakingGrammarAccess extends AbstractElementFinder.AbstractG
 	
 	//GroupDecisionSession:
 	//    (imports+=Import*)
-	//    concept=LibDesRun
+	//    decisionSupport=LibDesRun
 	//;
 	public GroupDecisionSessionElements getGroupDecisionSessionAccess() {
 		return pGroupDecisionSession;
@@ -1192,7 +1192,7 @@ public class DecisionmakingGrammarAccess extends AbstractElementFinder.AbstractG
 	// * Rules are then defined between brackets
 	// */
 	//Strategy:
-	//    'Strategy' name=ID  "withPreferenceIndication" solutionSelectedChosen=SolutionSelectionKind "{"
+	//    'Strategy' name=ID  "withPreferenceIndication" preferenceIndication=PreferenceIndicationKind "{"
 	//    rules+=Rule*    ("then" rules+=Rule*)* "}"
 	//;
 	public StrategyElements getStrategyAccess() {
@@ -1285,7 +1285,7 @@ public class DecisionmakingGrammarAccess extends AbstractElementFinder.AbstractG
 	// * Definition of a decision rule with its name and a description
 	// */
 	//DecisionRule :
-	//    "decisionrule" name=ID "(" solutionselectionaccepted+=SolutionSelectionKind* ")" description=STRING
+	//    "decisionrule" name=ID "(" prefIndAccepted+=PreferenceIndicationKind* ")" description=STRING
 	//;
 	public DecisionRuleElements getDecisionRuleAccess() {
 		return pDecisionRule;
@@ -1299,7 +1299,7 @@ public class DecisionmakingGrammarAccess extends AbstractElementFinder.AbstractG
 	// * Definition of an algorithm rule with its name and a description
 	// */
 	//Algorithm :
-	//    "algorithm" name=ID "(" solutionselectionaccepted+=SolutionSelectionKind* ")" "considersTP" considersTP=BOOLEAN description=STRING
+	//    "algorithm" name=ID "(" prefIndAccepted+=PreferenceIndicationKind* ")" "considersTP" considersTP=BOOLEAN description=STRING
 	//;
 	public AlgorithmElements getAlgorithmAccess() {
 		return pAlgorithm;
@@ -1337,7 +1337,7 @@ public class DecisionmakingGrammarAccess extends AbstractElementFinder.AbstractG
 	
 	//Strat :
 	//    Strategy |
-	//    "Strategy" strat=[StrategyPredefined|QualifiedName] "withPreferenceIndication" solutionSelectedChosen=SolutionSelectionKind ("for" teamprofiles+=[TP::Profile|QualifiedName]+)?
+	//    "Strategy" strat=[StrategyPredefined|QualifiedName] "withPreferenceIndication" solutionSelectedChosen=PreferenceIndicationKind ("for" teamprofiles+=[TP::Profile|QualifiedName]+)?
 	//;
 	public StratElements getStratAccess() {
 		return pStrat;
@@ -1399,17 +1399,17 @@ public class DecisionmakingGrammarAccess extends AbstractElementFinder.AbstractG
 		return getPreferenceAccess().getRule();
 	}
 	
-	//enum SolutionSelectionKind :
+	//enum PreferenceIndicationKind :
 	//    ranking="Ranking" |
 	//    rating="Rating" |
 	//    yesno="YesNo"
 	//;
-	public SolutionSelectionKindElements getSolutionSelectionKindAccess() {
-		return eSolutionSelectionKind;
+	public PreferenceIndicationKindElements getPreferenceIndicationKindAccess() {
+		return ePreferenceIndicationKind;
 	}
 	
-	public EnumRule getSolutionSelectionKindRule() {
-		return getSolutionSelectionKindAccess().getRule();
+	public EnumRule getPreferenceIndicationKindRule() {
+		return getPreferenceIndicationKindAccess().getRule();
 	}
 	
 	//QualifiedName:

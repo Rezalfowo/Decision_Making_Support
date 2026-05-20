@@ -3,7 +3,7 @@ Automatic-Module-Name: decisionmaking.ui
 Bundle-ManifestVersion: 2
 Bundle-Name: decisionmaking.ui
 Bundle-Vendor: My Company
-Bundle-Version: 1.0.0.202605191421
+Bundle-Version: 1.0.0.202605200912
 Bundle-SymbolicName: decisionmaking.ui; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: decisionmaking,decisionmaking.ide,org.eclipse.xtext.ui,o

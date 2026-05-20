@@ -2,14 +2,12 @@ grammar xtext.Decisionmaking with org.eclipse.xtext.common.Terminals
 
 generate decisionmaking "http://www.Decisionmaking.xtext"
 
-
-
 import  "http://www.Teamprofile.xtext" as TP
 import "http://www.Sadd.xtext" as SADD
 
 GroupDecisionSession:
 	(imports+=Import*)
-	concept=LibDesRun
+	decisionSupport=LibDesRun
 	
 ;
 LibDesRun :
@@ -32,7 +30,7 @@ Library :
  * Rules are then defined between brackets
  */
 Strategy:
-	'Strategy' name=ID  "withPreferenceIndication" solutionSelectedChosen=SolutionSelectionKind "{" 
+	'Strategy' name=ID  "withPreferenceIndication" preferenceIndication=PreferenceIndicationKind "{" 
 	rules+=Rule*	("then" rules+=Rule*)* "}"
 ;
 StrategyPredefined:
@@ -70,13 +68,13 @@ StrategyAlgorithm :
  * Definition of a decision rule with its name and a description
  */
 DecisionRule :
-	"decisionrule" name=ID "(" solutionselectionaccepted+=SolutionSelectionKind* ")" description=STRING 
+	"decisionrule" name=ID "(" prefIndAccepted+=PreferenceIndicationKind* ")" description=STRING 
 ;
 /**
  * Definition of an algorithm rule with its name and a description
  */
 Algorithm :
-	"algorithm" name=ID "(" solutionselectionaccepted+=SolutionSelectionKind* ")" "considersTP" considersTP=BOOLEAN description=STRING  
+	"algorithm" name=ID "(" prefIndAccepted+=PreferenceIndicationKind* ")" "considersTP" considersTP=BOOLEAN description=STRING  
 
 ;
 
@@ -92,7 +90,7 @@ DecisionSupport:
 ;
 Strat :
 	Strategy |
-	"Strategy" strat=[StrategyPredefined|QualifiedName] "withPreferenceIndication" solutionSelectedChosen=SolutionSelectionKind ("for" teamprofiles+=[TP::Profile|QualifiedName]+)? 
+	"Strategy" strat=[StrategyPredefined|QualifiedName] "withPreferenceIndication" solutionSelectedChosen=PreferenceIndicationKind ("for" teamprofiles+=[TP::Profile|QualifiedName]+)? 
 ;
 
 RunTime:
@@ -115,7 +113,7 @@ AlternativePreference:
 Preference :
 	actor=[TP::Actor] "selected" value=INT "rationale" rationale=STRING //"for" alternative=[SADD::Alternative|QualifiedName]
 ;
-enum SolutionSelectionKind :
+enum PreferenceIndicationKind :
 	ranking="Ranking" |
 	rating="Rating" |
 	yesno="YesNo"

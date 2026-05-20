@@ -1880,27 +1880,27 @@ public class InternalDecisionmakingParser extends AbstractInternalContentAssistP
     // $ANTLR end "ruleQualifiedName"
 
 
-    // $ANTLR start "ruleSolutionSelectionKind"
-    // InternalDecisionmaking.g:578:1: ruleSolutionSelectionKind : ( ( rule__SolutionSelectionKind__Alternatives ) ) ;
-    public final void ruleSolutionSelectionKind() throws RecognitionException {
+    // $ANTLR start "rulePreferenceIndicationKind"
+    // InternalDecisionmaking.g:578:1: rulePreferenceIndicationKind : ( ( rule__PreferenceIndicationKind__Alternatives ) ) ;
+    public final void rulePreferenceIndicationKind() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalDecisionmaking.g:582:1: ( ( ( rule__SolutionSelectionKind__Alternatives ) ) )
-            // InternalDecisionmaking.g:583:2: ( ( rule__SolutionSelectionKind__Alternatives ) )
+            // InternalDecisionmaking.g:582:1: ( ( ( rule__PreferenceIndicationKind__Alternatives ) ) )
+            // InternalDecisionmaking.g:583:2: ( ( rule__PreferenceIndicationKind__Alternatives ) )
             {
-            // InternalDecisionmaking.g:583:2: ( ( rule__SolutionSelectionKind__Alternatives ) )
-            // InternalDecisionmaking.g:584:3: ( rule__SolutionSelectionKind__Alternatives )
+            // InternalDecisionmaking.g:583:2: ( ( rule__PreferenceIndicationKind__Alternatives ) )
+            // InternalDecisionmaking.g:584:3: ( rule__PreferenceIndicationKind__Alternatives )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getSolutionSelectionKindAccess().getAlternatives()); 
+               before(grammarAccess.getPreferenceIndicationKindAccess().getAlternatives()); 
             }
-            // InternalDecisionmaking.g:585:3: ( rule__SolutionSelectionKind__Alternatives )
-            // InternalDecisionmaking.g:585:4: rule__SolutionSelectionKind__Alternatives
+            // InternalDecisionmaking.g:585:3: ( rule__PreferenceIndicationKind__Alternatives )
+            // InternalDecisionmaking.g:585:4: rule__PreferenceIndicationKind__Alternatives
             {
             pushFollow(FOLLOW_2);
-            rule__SolutionSelectionKind__Alternatives();
+            rule__PreferenceIndicationKind__Alternatives();
 
             state._fsp--;
             if (state.failed) return ;
@@ -1908,7 +1908,7 @@ public class InternalDecisionmakingParser extends AbstractInternalContentAssistP
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getSolutionSelectionKindAccess().getAlternatives()); 
+               after(grammarAccess.getPreferenceIndicationKindAccess().getAlternatives()); 
             }
 
             }
@@ -1928,7 +1928,7 @@ public class InternalDecisionmakingParser extends AbstractInternalContentAssistP
         }
         return ;
     }
-    // $ANTLR end "ruleSolutionSelectionKind"
+    // $ANTLR end "rulePreferenceIndicationKind"
 
 
     // $ANTLR start "ruleBOOLEAN"
@@ -2479,9 +2479,9 @@ public class InternalDecisionmakingParser extends AbstractInternalContentAssistP
     // $ANTLR end "rule__Strat__Alternatives"
 
 
-    // $ANTLR start "rule__SolutionSelectionKind__Alternatives"
-    // InternalDecisionmaking.g:699:1: rule__SolutionSelectionKind__Alternatives : ( ( ( 'Ranking' ) ) | ( ( 'Rating' ) ) | ( ( 'YesNo' ) ) );
-    public final void rule__SolutionSelectionKind__Alternatives() throws RecognitionException {
+    // $ANTLR start "rule__PreferenceIndicationKind__Alternatives"
+    // InternalDecisionmaking.g:699:1: rule__PreferenceIndicationKind__Alternatives : ( ( ( 'Ranking' ) ) | ( ( 'Rating' ) ) | ( ( 'YesNo' ) ) );
+    public final void rule__PreferenceIndicationKind__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -2520,7 +2520,7 @@ public class InternalDecisionmakingParser extends AbstractInternalContentAssistP
                     // InternalDecisionmaking.g:705:3: ( 'Ranking' )
                     {
                     if ( state.backtracking==0 ) {
-                       before(grammarAccess.getSolutionSelectionKindAccess().getRankingEnumLiteralDeclaration_0()); 
+                       before(grammarAccess.getPreferenceIndicationKindAccess().getRankingEnumLiteralDeclaration_0()); 
                     }
                     // InternalDecisionmaking.g:706:3: ( 'Ranking' )
                     // InternalDecisionmaking.g:706:4: 'Ranking'
@@ -2530,7 +2530,7 @@ public class InternalDecisionmakingParser extends AbstractInternalContentAssistP
                     }
 
                     if ( state.backtracking==0 ) {
-                       after(grammarAccess.getSolutionSelectionKindAccess().getRankingEnumLiteralDeclaration_0()); 
+                       after(grammarAccess.getPreferenceIndicationKindAccess().getRankingEnumLiteralDeclaration_0()); 
                     }
 
                     }
@@ -2545,7 +2545,7 @@ public class InternalDecisionmakingParser extends AbstractInternalContentAssistP
                     // InternalDecisionmaking.g:711:3: ( 'Rating' )
                     {
                     if ( state.backtracking==0 ) {
-                       before(grammarAccess.getSolutionSelectionKindAccess().getRatingEnumLiteralDeclaration_1()); 
+                       before(grammarAccess.getPreferenceIndicationKindAccess().getRatingEnumLiteralDeclaration_1()); 
                     }
                     // InternalDecisionmaking.g:712:3: ( 'Rating' )
                     // InternalDecisionmaking.g:712:4: 'Rating'
@@ -2555,7 +2555,7 @@ public class InternalDecisionmakingParser extends AbstractInternalContentAssistP
                     }
 
                     if ( state.backtracking==0 ) {
-                       after(grammarAccess.getSolutionSelectionKindAccess().getRatingEnumLiteralDeclaration_1()); 
+                       after(grammarAccess.getPreferenceIndicationKindAccess().getRatingEnumLiteralDeclaration_1()); 
                     }
 
                     }
@@ -2570,7 +2570,7 @@ public class InternalDecisionmakingParser extends AbstractInternalContentAssistP
                     // InternalDecisionmaking.g:717:3: ( 'YesNo' )
                     {
                     if ( state.backtracking==0 ) {
-                       before(grammarAccess.getSolutionSelectionKindAccess().getYesnoEnumLiteralDeclaration_2()); 
+                       before(grammarAccess.getPreferenceIndicationKindAccess().getYesnoEnumLiteralDeclaration_2()); 
                     }
                     // InternalDecisionmaking.g:718:3: ( 'YesNo' )
                     // InternalDecisionmaking.g:718:4: 'YesNo'
@@ -2580,7 +2580,7 @@ public class InternalDecisionmakingParser extends AbstractInternalContentAssistP
                     }
 
                     if ( state.backtracking==0 ) {
-                       after(grammarAccess.getSolutionSelectionKindAccess().getYesnoEnumLiteralDeclaration_2()); 
+                       after(grammarAccess.getPreferenceIndicationKindAccess().getYesnoEnumLiteralDeclaration_2()); 
                     }
 
                     }
@@ -2602,7 +2602,7 @@ public class InternalDecisionmakingParser extends AbstractInternalContentAssistP
         }
         return ;
     }
-    // $ANTLR end "rule__SolutionSelectionKind__Alternatives"
+    // $ANTLR end "rule__PreferenceIndicationKind__Alternatives"
 
 
     // $ANTLR start "rule__BOOLEAN__Alternatives"
@@ -2838,26 +2838,26 @@ public class InternalDecisionmakingParser extends AbstractInternalContentAssistP
 
 
     // $ANTLR start "rule__GroupDecisionSession__Group__1__Impl"
-    // InternalDecisionmaking.g:785:1: rule__GroupDecisionSession__Group__1__Impl : ( ( rule__GroupDecisionSession__ConceptAssignment_1 ) ) ;
+    // InternalDecisionmaking.g:785:1: rule__GroupDecisionSession__Group__1__Impl : ( ( rule__GroupDecisionSession__DecisionSupportAssignment_1 ) ) ;
     public final void rule__GroupDecisionSession__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalDecisionmaking.g:789:1: ( ( ( rule__GroupDecisionSession__ConceptAssignment_1 ) ) )
-            // InternalDecisionmaking.g:790:1: ( ( rule__GroupDecisionSession__ConceptAssignment_1 ) )
+            // InternalDecisionmaking.g:789:1: ( ( ( rule__GroupDecisionSession__DecisionSupportAssignment_1 ) ) )
+            // InternalDecisionmaking.g:790:1: ( ( rule__GroupDecisionSession__DecisionSupportAssignment_1 ) )
             {
-            // InternalDecisionmaking.g:790:1: ( ( rule__GroupDecisionSession__ConceptAssignment_1 ) )
-            // InternalDecisionmaking.g:791:2: ( rule__GroupDecisionSession__ConceptAssignment_1 )
+            // InternalDecisionmaking.g:790:1: ( ( rule__GroupDecisionSession__DecisionSupportAssignment_1 ) )
+            // InternalDecisionmaking.g:791:2: ( rule__GroupDecisionSession__DecisionSupportAssignment_1 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGroupDecisionSessionAccess().getConceptAssignment_1()); 
+               before(grammarAccess.getGroupDecisionSessionAccess().getDecisionSupportAssignment_1()); 
             }
-            // InternalDecisionmaking.g:792:2: ( rule__GroupDecisionSession__ConceptAssignment_1 )
-            // InternalDecisionmaking.g:792:3: rule__GroupDecisionSession__ConceptAssignment_1
+            // InternalDecisionmaking.g:792:2: ( rule__GroupDecisionSession__DecisionSupportAssignment_1 )
+            // InternalDecisionmaking.g:792:3: rule__GroupDecisionSession__DecisionSupportAssignment_1
             {
             pushFollow(FOLLOW_2);
-            rule__GroupDecisionSession__ConceptAssignment_1();
+            rule__GroupDecisionSession__DecisionSupportAssignment_1();
 
             state._fsp--;
             if (state.failed) return ;
@@ -2865,7 +2865,7 @@ public class InternalDecisionmakingParser extends AbstractInternalContentAssistP
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGroupDecisionSessionAccess().getConceptAssignment_1()); 
+               after(grammarAccess.getGroupDecisionSessionAccess().getDecisionSupportAssignment_1()); 
             }
 
             }
@@ -3607,26 +3607,26 @@ public class InternalDecisionmakingParser extends AbstractInternalContentAssistP
 
 
     // $ANTLR start "rule__Strategy__Group__3__Impl"
-    // InternalDecisionmaking.g:1029:1: rule__Strategy__Group__3__Impl : ( ( rule__Strategy__SolutionSelectedChosenAssignment_3 ) ) ;
+    // InternalDecisionmaking.g:1029:1: rule__Strategy__Group__3__Impl : ( ( rule__Strategy__PreferenceIndicationAssignment_3 ) ) ;
     public final void rule__Strategy__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalDecisionmaking.g:1033:1: ( ( ( rule__Strategy__SolutionSelectedChosenAssignment_3 ) ) )
-            // InternalDecisionmaking.g:1034:1: ( ( rule__Strategy__SolutionSelectedChosenAssignment_3 ) )
+            // InternalDecisionmaking.g:1033:1: ( ( ( rule__Strategy__PreferenceIndicationAssignment_3 ) ) )
+            // InternalDecisionmaking.g:1034:1: ( ( rule__Strategy__PreferenceIndicationAssignment_3 ) )
             {
-            // InternalDecisionmaking.g:1034:1: ( ( rule__Strategy__SolutionSelectedChosenAssignment_3 ) )
-            // InternalDecisionmaking.g:1035:2: ( rule__Strategy__SolutionSelectedChosenAssignment_3 )
+            // InternalDecisionmaking.g:1034:1: ( ( rule__Strategy__PreferenceIndicationAssignment_3 ) )
+            // InternalDecisionmaking.g:1035:2: ( rule__Strategy__PreferenceIndicationAssignment_3 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getStrategyAccess().getSolutionSelectedChosenAssignment_3()); 
+               before(grammarAccess.getStrategyAccess().getPreferenceIndicationAssignment_3()); 
             }
-            // InternalDecisionmaking.g:1036:2: ( rule__Strategy__SolutionSelectedChosenAssignment_3 )
-            // InternalDecisionmaking.g:1036:3: rule__Strategy__SolutionSelectedChosenAssignment_3
+            // InternalDecisionmaking.g:1036:2: ( rule__Strategy__PreferenceIndicationAssignment_3 )
+            // InternalDecisionmaking.g:1036:3: rule__Strategy__PreferenceIndicationAssignment_3
             {
             pushFollow(FOLLOW_2);
-            rule__Strategy__SolutionSelectedChosenAssignment_3();
+            rule__Strategy__PreferenceIndicationAssignment_3();
 
             state._fsp--;
             if (state.failed) return ;
@@ -3634,7 +3634,7 @@ public class InternalDecisionmakingParser extends AbstractInternalContentAssistP
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getStrategyAccess().getSolutionSelectedChosenAssignment_3()); 
+               after(grammarAccess.getStrategyAccess().getPreferenceIndicationAssignment_3()); 
             }
 
             }
@@ -5911,22 +5911,22 @@ public class InternalDecisionmakingParser extends AbstractInternalContentAssistP
 
 
     // $ANTLR start "rule__DecisionRule__Group__3__Impl"
-    // InternalDecisionmaking.g:1738:1: rule__DecisionRule__Group__3__Impl : ( ( rule__DecisionRule__SolutionselectionacceptedAssignment_3 )* ) ;
+    // InternalDecisionmaking.g:1738:1: rule__DecisionRule__Group__3__Impl : ( ( rule__DecisionRule__PrefIndAcceptedAssignment_3 )* ) ;
     public final void rule__DecisionRule__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalDecisionmaking.g:1742:1: ( ( ( rule__DecisionRule__SolutionselectionacceptedAssignment_3 )* ) )
-            // InternalDecisionmaking.g:1743:1: ( ( rule__DecisionRule__SolutionselectionacceptedAssignment_3 )* )
+            // InternalDecisionmaking.g:1742:1: ( ( ( rule__DecisionRule__PrefIndAcceptedAssignment_3 )* ) )
+            // InternalDecisionmaking.g:1743:1: ( ( rule__DecisionRule__PrefIndAcceptedAssignment_3 )* )
             {
-            // InternalDecisionmaking.g:1743:1: ( ( rule__DecisionRule__SolutionselectionacceptedAssignment_3 )* )
-            // InternalDecisionmaking.g:1744:2: ( rule__DecisionRule__SolutionselectionacceptedAssignment_3 )*
+            // InternalDecisionmaking.g:1743:1: ( ( rule__DecisionRule__PrefIndAcceptedAssignment_3 )* )
+            // InternalDecisionmaking.g:1744:2: ( rule__DecisionRule__PrefIndAcceptedAssignment_3 )*
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getDecisionRuleAccess().getSolutionselectionacceptedAssignment_3()); 
+               before(grammarAccess.getDecisionRuleAccess().getPrefIndAcceptedAssignment_3()); 
             }
-            // InternalDecisionmaking.g:1745:2: ( rule__DecisionRule__SolutionselectionacceptedAssignment_3 )*
+            // InternalDecisionmaking.g:1745:2: ( rule__DecisionRule__PrefIndAcceptedAssignment_3 )*
             loop16:
             do {
                 int alt16=2;
@@ -5939,10 +5939,10 @@ public class InternalDecisionmakingParser extends AbstractInternalContentAssistP
 
                 switch (alt16) {
             	case 1 :
-            	    // InternalDecisionmaking.g:1745:3: rule__DecisionRule__SolutionselectionacceptedAssignment_3
+            	    // InternalDecisionmaking.g:1745:3: rule__DecisionRule__PrefIndAcceptedAssignment_3
             	    {
             	    pushFollow(FOLLOW_20);
-            	    rule__DecisionRule__SolutionselectionacceptedAssignment_3();
+            	    rule__DecisionRule__PrefIndAcceptedAssignment_3();
 
             	    state._fsp--;
             	    if (state.failed) return ;
@@ -5956,7 +5956,7 @@ public class InternalDecisionmakingParser extends AbstractInternalContentAssistP
             } while (true);
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getDecisionRuleAccess().getSolutionselectionacceptedAssignment_3()); 
+               after(grammarAccess.getDecisionRuleAccess().getPrefIndAcceptedAssignment_3()); 
             }
 
             }
@@ -6428,22 +6428,22 @@ public class InternalDecisionmakingParser extends AbstractInternalContentAssistP
 
 
     // $ANTLR start "rule__Algorithm__Group__3__Impl"
-    // InternalDecisionmaking.g:1900:1: rule__Algorithm__Group__3__Impl : ( ( rule__Algorithm__SolutionselectionacceptedAssignment_3 )* ) ;
+    // InternalDecisionmaking.g:1900:1: rule__Algorithm__Group__3__Impl : ( ( rule__Algorithm__PrefIndAcceptedAssignment_3 )* ) ;
     public final void rule__Algorithm__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalDecisionmaking.g:1904:1: ( ( ( rule__Algorithm__SolutionselectionacceptedAssignment_3 )* ) )
-            // InternalDecisionmaking.g:1905:1: ( ( rule__Algorithm__SolutionselectionacceptedAssignment_3 )* )
+            // InternalDecisionmaking.g:1904:1: ( ( ( rule__Algorithm__PrefIndAcceptedAssignment_3 )* ) )
+            // InternalDecisionmaking.g:1905:1: ( ( rule__Algorithm__PrefIndAcceptedAssignment_3 )* )
             {
-            // InternalDecisionmaking.g:1905:1: ( ( rule__Algorithm__SolutionselectionacceptedAssignment_3 )* )
-            // InternalDecisionmaking.g:1906:2: ( rule__Algorithm__SolutionselectionacceptedAssignment_3 )*
+            // InternalDecisionmaking.g:1905:1: ( ( rule__Algorithm__PrefIndAcceptedAssignment_3 )* )
+            // InternalDecisionmaking.g:1906:2: ( rule__Algorithm__PrefIndAcceptedAssignment_3 )*
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getAlgorithmAccess().getSolutionselectionacceptedAssignment_3()); 
+               before(grammarAccess.getAlgorithmAccess().getPrefIndAcceptedAssignment_3()); 
             }
-            // InternalDecisionmaking.g:1907:2: ( rule__Algorithm__SolutionselectionacceptedAssignment_3 )*
+            // InternalDecisionmaking.g:1907:2: ( rule__Algorithm__PrefIndAcceptedAssignment_3 )*
             loop17:
             do {
                 int alt17=2;
@@ -6456,10 +6456,10 @@ public class InternalDecisionmakingParser extends AbstractInternalContentAssistP
 
                 switch (alt17) {
             	case 1 :
-            	    // InternalDecisionmaking.g:1907:3: rule__Algorithm__SolutionselectionacceptedAssignment_3
+            	    // InternalDecisionmaking.g:1907:3: rule__Algorithm__PrefIndAcceptedAssignment_3
             	    {
             	    pushFollow(FOLLOW_20);
-            	    rule__Algorithm__SolutionselectionacceptedAssignment_3();
+            	    rule__Algorithm__PrefIndAcceptedAssignment_3();
 
             	    state._fsp--;
             	    if (state.failed) return ;
@@ -6473,7 +6473,7 @@ public class InternalDecisionmakingParser extends AbstractInternalContentAssistP
             } while (true);
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getAlgorithmAccess().getSolutionselectionacceptedAssignment_3()); 
+               after(grammarAccess.getAlgorithmAccess().getPrefIndAcceptedAssignment_3()); 
             }
 
             }
@@ -11242,9 +11242,9 @@ public class InternalDecisionmakingParser extends AbstractInternalContentAssistP
     // $ANTLR end "rule__GroupDecisionSession__ImportsAssignment_0"
 
 
-    // $ANTLR start "rule__GroupDecisionSession__ConceptAssignment_1"
-    // InternalDecisionmaking.g:3385:1: rule__GroupDecisionSession__ConceptAssignment_1 : ( ruleLibDesRun ) ;
-    public final void rule__GroupDecisionSession__ConceptAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__GroupDecisionSession__DecisionSupportAssignment_1"
+    // InternalDecisionmaking.g:3385:1: rule__GroupDecisionSession__DecisionSupportAssignment_1 : ( ruleLibDesRun ) ;
+    public final void rule__GroupDecisionSession__DecisionSupportAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -11256,7 +11256,7 @@ public class InternalDecisionmakingParser extends AbstractInternalContentAssistP
             // InternalDecisionmaking.g:3391:3: ruleLibDesRun
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getGroupDecisionSessionAccess().getConceptLibDesRunParserRuleCall_1_0()); 
+               before(grammarAccess.getGroupDecisionSessionAccess().getDecisionSupportLibDesRunParserRuleCall_1_0()); 
             }
             pushFollow(FOLLOW_2);
             ruleLibDesRun();
@@ -11264,7 +11264,7 @@ public class InternalDecisionmakingParser extends AbstractInternalContentAssistP
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getGroupDecisionSessionAccess().getConceptLibDesRunParserRuleCall_1_0()); 
+               after(grammarAccess.getGroupDecisionSessionAccess().getDecisionSupportLibDesRunParserRuleCall_1_0()); 
             }
 
             }
@@ -11284,7 +11284,7 @@ public class InternalDecisionmakingParser extends AbstractInternalContentAssistP
         }
         return ;
     }
-    // $ANTLR end "rule__GroupDecisionSession__ConceptAssignment_1"
+    // $ANTLR end "rule__GroupDecisionSession__DecisionSupportAssignment_1"
 
 
     // $ANTLR start "rule__LibDesRun__LibraryAssignment_0"
@@ -11680,29 +11680,29 @@ public class InternalDecisionmakingParser extends AbstractInternalContentAssistP
     // $ANTLR end "rule__Strategy__NameAssignment_1"
 
 
-    // $ANTLR start "rule__Strategy__SolutionSelectedChosenAssignment_3"
-    // InternalDecisionmaking.g:3535:1: rule__Strategy__SolutionSelectedChosenAssignment_3 : ( ruleSolutionSelectionKind ) ;
-    public final void rule__Strategy__SolutionSelectedChosenAssignment_3() throws RecognitionException {
+    // $ANTLR start "rule__Strategy__PreferenceIndicationAssignment_3"
+    // InternalDecisionmaking.g:3535:1: rule__Strategy__PreferenceIndicationAssignment_3 : ( rulePreferenceIndicationKind ) ;
+    public final void rule__Strategy__PreferenceIndicationAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalDecisionmaking.g:3539:1: ( ( ruleSolutionSelectionKind ) )
-            // InternalDecisionmaking.g:3540:2: ( ruleSolutionSelectionKind )
+            // InternalDecisionmaking.g:3539:1: ( ( rulePreferenceIndicationKind ) )
+            // InternalDecisionmaking.g:3540:2: ( rulePreferenceIndicationKind )
             {
-            // InternalDecisionmaking.g:3540:2: ( ruleSolutionSelectionKind )
-            // InternalDecisionmaking.g:3541:3: ruleSolutionSelectionKind
+            // InternalDecisionmaking.g:3540:2: ( rulePreferenceIndicationKind )
+            // InternalDecisionmaking.g:3541:3: rulePreferenceIndicationKind
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getStrategyAccess().getSolutionSelectedChosenSolutionSelectionKindEnumRuleCall_3_0()); 
+               before(grammarAccess.getStrategyAccess().getPreferenceIndicationPreferenceIndicationKindEnumRuleCall_3_0()); 
             }
             pushFollow(FOLLOW_2);
-            ruleSolutionSelectionKind();
+            rulePreferenceIndicationKind();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getStrategyAccess().getSolutionSelectedChosenSolutionSelectionKindEnumRuleCall_3_0()); 
+               after(grammarAccess.getStrategyAccess().getPreferenceIndicationPreferenceIndicationKindEnumRuleCall_3_0()); 
             }
 
             }
@@ -11722,7 +11722,7 @@ public class InternalDecisionmakingParser extends AbstractInternalContentAssistP
         }
         return ;
     }
-    // $ANTLR end "rule__Strategy__SolutionSelectedChosenAssignment_3"
+    // $ANTLR end "rule__Strategy__PreferenceIndicationAssignment_3"
 
 
     // $ANTLR start "rule__Strategy__RulesAssignment_5"
@@ -12215,29 +12215,29 @@ public class InternalDecisionmakingParser extends AbstractInternalContentAssistP
     // $ANTLR end "rule__DecisionRule__NameAssignment_1"
 
 
-    // $ANTLR start "rule__DecisionRule__SolutionselectionacceptedAssignment_3"
-    // InternalDecisionmaking.g:3716:1: rule__DecisionRule__SolutionselectionacceptedAssignment_3 : ( ruleSolutionSelectionKind ) ;
-    public final void rule__DecisionRule__SolutionselectionacceptedAssignment_3() throws RecognitionException {
+    // $ANTLR start "rule__DecisionRule__PrefIndAcceptedAssignment_3"
+    // InternalDecisionmaking.g:3716:1: rule__DecisionRule__PrefIndAcceptedAssignment_3 : ( rulePreferenceIndicationKind ) ;
+    public final void rule__DecisionRule__PrefIndAcceptedAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalDecisionmaking.g:3720:1: ( ( ruleSolutionSelectionKind ) )
-            // InternalDecisionmaking.g:3721:2: ( ruleSolutionSelectionKind )
+            // InternalDecisionmaking.g:3720:1: ( ( rulePreferenceIndicationKind ) )
+            // InternalDecisionmaking.g:3721:2: ( rulePreferenceIndicationKind )
             {
-            // InternalDecisionmaking.g:3721:2: ( ruleSolutionSelectionKind )
-            // InternalDecisionmaking.g:3722:3: ruleSolutionSelectionKind
+            // InternalDecisionmaking.g:3721:2: ( rulePreferenceIndicationKind )
+            // InternalDecisionmaking.g:3722:3: rulePreferenceIndicationKind
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getDecisionRuleAccess().getSolutionselectionacceptedSolutionSelectionKindEnumRuleCall_3_0()); 
+               before(grammarAccess.getDecisionRuleAccess().getPrefIndAcceptedPreferenceIndicationKindEnumRuleCall_3_0()); 
             }
             pushFollow(FOLLOW_2);
-            ruleSolutionSelectionKind();
+            rulePreferenceIndicationKind();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getDecisionRuleAccess().getSolutionselectionacceptedSolutionSelectionKindEnumRuleCall_3_0()); 
+               after(grammarAccess.getDecisionRuleAccess().getPrefIndAcceptedPreferenceIndicationKindEnumRuleCall_3_0()); 
             }
 
             }
@@ -12257,7 +12257,7 @@ public class InternalDecisionmakingParser extends AbstractInternalContentAssistP
         }
         return ;
     }
-    // $ANTLR end "rule__DecisionRule__SolutionselectionacceptedAssignment_3"
+    // $ANTLR end "rule__DecisionRule__PrefIndAcceptedAssignment_3"
 
 
     // $ANTLR start "rule__DecisionRule__DescriptionAssignment_5"
@@ -12342,29 +12342,29 @@ public class InternalDecisionmakingParser extends AbstractInternalContentAssistP
     // $ANTLR end "rule__Algorithm__NameAssignment_1"
 
 
-    // $ANTLR start "rule__Algorithm__SolutionselectionacceptedAssignment_3"
-    // InternalDecisionmaking.g:3761:1: rule__Algorithm__SolutionselectionacceptedAssignment_3 : ( ruleSolutionSelectionKind ) ;
-    public final void rule__Algorithm__SolutionselectionacceptedAssignment_3() throws RecognitionException {
+    // $ANTLR start "rule__Algorithm__PrefIndAcceptedAssignment_3"
+    // InternalDecisionmaking.g:3761:1: rule__Algorithm__PrefIndAcceptedAssignment_3 : ( rulePreferenceIndicationKind ) ;
+    public final void rule__Algorithm__PrefIndAcceptedAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalDecisionmaking.g:3765:1: ( ( ruleSolutionSelectionKind ) )
-            // InternalDecisionmaking.g:3766:2: ( ruleSolutionSelectionKind )
+            // InternalDecisionmaking.g:3765:1: ( ( rulePreferenceIndicationKind ) )
+            // InternalDecisionmaking.g:3766:2: ( rulePreferenceIndicationKind )
             {
-            // InternalDecisionmaking.g:3766:2: ( ruleSolutionSelectionKind )
-            // InternalDecisionmaking.g:3767:3: ruleSolutionSelectionKind
+            // InternalDecisionmaking.g:3766:2: ( rulePreferenceIndicationKind )
+            // InternalDecisionmaking.g:3767:3: rulePreferenceIndicationKind
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getAlgorithmAccess().getSolutionselectionacceptedSolutionSelectionKindEnumRuleCall_3_0()); 
+               before(grammarAccess.getAlgorithmAccess().getPrefIndAcceptedPreferenceIndicationKindEnumRuleCall_3_0()); 
             }
             pushFollow(FOLLOW_2);
-            ruleSolutionSelectionKind();
+            rulePreferenceIndicationKind();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getAlgorithmAccess().getSolutionselectionacceptedSolutionSelectionKindEnumRuleCall_3_0()); 
+               after(grammarAccess.getAlgorithmAccess().getPrefIndAcceptedPreferenceIndicationKindEnumRuleCall_3_0()); 
             }
 
             }
@@ -12384,7 +12384,7 @@ public class InternalDecisionmakingParser extends AbstractInternalContentAssistP
         }
         return ;
     }
-    // $ANTLR end "rule__Algorithm__SolutionselectionacceptedAssignment_3"
+    // $ANTLR end "rule__Algorithm__PrefIndAcceptedAssignment_3"
 
 
     // $ANTLR start "rule__Algorithm__ConsidersTPAssignment_6"
@@ -12719,28 +12719,28 @@ public class InternalDecisionmakingParser extends AbstractInternalContentAssistP
 
 
     // $ANTLR start "rule__Strat__SolutionSelectedChosenAssignment_1_3"
-    // InternalDecisionmaking.g:3889:1: rule__Strat__SolutionSelectedChosenAssignment_1_3 : ( ruleSolutionSelectionKind ) ;
+    // InternalDecisionmaking.g:3889:1: rule__Strat__SolutionSelectedChosenAssignment_1_3 : ( rulePreferenceIndicationKind ) ;
     public final void rule__Strat__SolutionSelectedChosenAssignment_1_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalDecisionmaking.g:3893:1: ( ( ruleSolutionSelectionKind ) )
-            // InternalDecisionmaking.g:3894:2: ( ruleSolutionSelectionKind )
+            // InternalDecisionmaking.g:3893:1: ( ( rulePreferenceIndicationKind ) )
+            // InternalDecisionmaking.g:3894:2: ( rulePreferenceIndicationKind )
             {
-            // InternalDecisionmaking.g:3894:2: ( ruleSolutionSelectionKind )
-            // InternalDecisionmaking.g:3895:3: ruleSolutionSelectionKind
+            // InternalDecisionmaking.g:3894:2: ( rulePreferenceIndicationKind )
+            // InternalDecisionmaking.g:3895:3: rulePreferenceIndicationKind
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getStratAccess().getSolutionSelectedChosenSolutionSelectionKindEnumRuleCall_1_3_0()); 
+               before(grammarAccess.getStratAccess().getSolutionSelectedChosenPreferenceIndicationKindEnumRuleCall_1_3_0()); 
             }
             pushFollow(FOLLOW_2);
-            ruleSolutionSelectionKind();
+            rulePreferenceIndicationKind();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getStratAccess().getSolutionSelectedChosenSolutionSelectionKindEnumRuleCall_1_3_0()); 
+               after(grammarAccess.getStratAccess().getSolutionSelectedChosenPreferenceIndicationKindEnumRuleCall_1_3_0()); 
             }
 
             }

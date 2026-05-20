@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
 import xtext.decisionmaking.Algorithm;
 import xtext.decisionmaking.BOOLEAN;
 import xtext.decisionmaking.DecisionmakingPackage;
-import xtext.decisionmaking.SolutionSelectionKind;
+import xtext.decisionmaking.PreferenceIndicationKind;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,7 +30,7 @@ import xtext.decisionmaking.SolutionSelectionKind;
  * </p>
  * <ul>
  *   <li>{@link xtext.decisionmaking.impl.AlgorithmImpl#getName <em>Name</em>}</li>
- *   <li>{@link xtext.decisionmaking.impl.AlgorithmImpl#getSolutionselectionaccepted <em>Solutionselectionaccepted</em>}</li>
+ *   <li>{@link xtext.decisionmaking.impl.AlgorithmImpl#getPrefIndAccepted <em>Pref Ind Accepted</em>}</li>
  *   <li>{@link xtext.decisionmaking.impl.AlgorithmImpl#getConsidersTP <em>Considers TP</em>}</li>
  *   <li>{@link xtext.decisionmaking.impl.AlgorithmImpl#getDescription <em>Description</em>}</li>
  * </ul>
@@ -60,14 +60,14 @@ public class AlgorithmImpl extends MinimalEObjectImpl.Container implements Algor
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getSolutionselectionaccepted() <em>Solutionselectionaccepted</em>}' attribute list.
+   * The cached value of the '{@link #getPrefIndAccepted() <em>Pref Ind Accepted</em>}' attribute list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getSolutionselectionaccepted()
+   * @see #getPrefIndAccepted()
    * @generated
    * @ordered
    */
-  protected EList<SolutionSelectionKind> solutionselectionaccepted;
+  protected EList<PreferenceIndicationKind> prefIndAccepted;
 
   /**
    * The default value of the '{@link #getConsidersTP() <em>Considers TP</em>}' attribute.
@@ -161,13 +161,13 @@ public class AlgorithmImpl extends MinimalEObjectImpl.Container implements Algor
    * @generated
    */
   @Override
-  public EList<SolutionSelectionKind> getSolutionselectionaccepted()
+  public EList<PreferenceIndicationKind> getPrefIndAccepted()
   {
-    if (solutionselectionaccepted == null)
+    if (prefIndAccepted == null)
     {
-      solutionselectionaccepted = new EDataTypeEList<SolutionSelectionKind>(SolutionSelectionKind.class, this, DecisionmakingPackage.ALGORITHM__SOLUTIONSELECTIONACCEPTED);
+      prefIndAccepted = new EDataTypeEList<PreferenceIndicationKind>(PreferenceIndicationKind.class, this, DecisionmakingPackage.ALGORITHM__PREF_IND_ACCEPTED);
     }
-    return solutionselectionaccepted;
+    return prefIndAccepted;
   }
 
   /**
@@ -232,8 +232,8 @@ public class AlgorithmImpl extends MinimalEObjectImpl.Container implements Algor
     {
       case DecisionmakingPackage.ALGORITHM__NAME:
         return getName();
-      case DecisionmakingPackage.ALGORITHM__SOLUTIONSELECTIONACCEPTED:
-        return getSolutionselectionaccepted();
+      case DecisionmakingPackage.ALGORITHM__PREF_IND_ACCEPTED:
+        return getPrefIndAccepted();
       case DecisionmakingPackage.ALGORITHM__CONSIDERS_TP:
         return getConsidersTP();
       case DecisionmakingPackage.ALGORITHM__DESCRIPTION:
@@ -256,9 +256,9 @@ public class AlgorithmImpl extends MinimalEObjectImpl.Container implements Algor
       case DecisionmakingPackage.ALGORITHM__NAME:
         setName((String)newValue);
         return;
-      case DecisionmakingPackage.ALGORITHM__SOLUTIONSELECTIONACCEPTED:
-        getSolutionselectionaccepted().clear();
-        getSolutionselectionaccepted().addAll((Collection<? extends SolutionSelectionKind>)newValue);
+      case DecisionmakingPackage.ALGORITHM__PREF_IND_ACCEPTED:
+        getPrefIndAccepted().clear();
+        getPrefIndAccepted().addAll((Collection<? extends PreferenceIndicationKind>)newValue);
         return;
       case DecisionmakingPackage.ALGORITHM__CONSIDERS_TP:
         setConsidersTP((BOOLEAN)newValue);
@@ -283,8 +283,8 @@ public class AlgorithmImpl extends MinimalEObjectImpl.Container implements Algor
       case DecisionmakingPackage.ALGORITHM__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case DecisionmakingPackage.ALGORITHM__SOLUTIONSELECTIONACCEPTED:
-        getSolutionselectionaccepted().clear();
+      case DecisionmakingPackage.ALGORITHM__PREF_IND_ACCEPTED:
+        getPrefIndAccepted().clear();
         return;
       case DecisionmakingPackage.ALGORITHM__CONSIDERS_TP:
         setConsidersTP(CONSIDERS_TP_EDEFAULT);
@@ -308,8 +308,8 @@ public class AlgorithmImpl extends MinimalEObjectImpl.Container implements Algor
     {
       case DecisionmakingPackage.ALGORITHM__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case DecisionmakingPackage.ALGORITHM__SOLUTIONSELECTIONACCEPTED:
-        return solutionselectionaccepted != null && !solutionselectionaccepted.isEmpty();
+      case DecisionmakingPackage.ALGORITHM__PREF_IND_ACCEPTED:
+        return prefIndAccepted != null && !prefIndAccepted.isEmpty();
       case DecisionmakingPackage.ALGORITHM__CONSIDERS_TP:
         return considersTP != CONSIDERS_TP_EDEFAULT;
       case DecisionmakingPackage.ALGORITHM__DESCRIPTION:
@@ -331,8 +331,8 @@ public class AlgorithmImpl extends MinimalEObjectImpl.Container implements Algor
     StringBuilder result = new StringBuilder(super.toString());
     result.append(" (name: ");
     result.append(name);
-    result.append(", solutionselectionaccepted: ");
-    result.append(solutionselectionaccepted);
+    result.append(", prefIndAccepted: ");
+    result.append(prefIndAccepted);
     result.append(", considersTP: ");
     result.append(considersTP);
     result.append(", description: ");
