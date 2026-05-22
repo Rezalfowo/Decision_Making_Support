@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: teamprofile.ui
+Bundle-ManifestVersion: 2
+Bundle-Name: teamprofile.ui
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.202605191421
+Bundle-SymbolicName: teamprofile.ui; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: teamprofile,teamprofile.ide,org.eclipse.xtext.ui,org.ecl
+ ipse.xtext.ui.shared,org.eclipse.xtext.ui.codetemplates.ui,org.eclipse.
+ ui.editors;bundle-version="3.14.300",org.eclipse.ui.ide;bundle-version=
+ "3.18.500",org.eclipse.ui,org.eclipse.compare,org.eclipse.xtext.builder
+Import-Package: org.apache.log4j
+Export-Package: xtext.ui.quickfix,teamprofile.ui.internal,xtext.ui.conte
+ ntassist
+Bundle-Activator: teamprofile.ui.internal.TeamprofileActivator
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=21))"
+

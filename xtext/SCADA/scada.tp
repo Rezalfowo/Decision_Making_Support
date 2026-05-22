@@ -1,0 +1,18 @@
+import "scada.humanfActor"
+Actor Alice : "Skill_Authentication_AC" = 5
+Actor Bob : "Skill_Authentication_AC" = 4
+Actor Carlos : "Skill_Authentication_AC" = 2
+Actor David : "Experience_Authorization_AC" = 3 "Experience_Authentication_AC" = 2
+ 
+Expert_Authentication gathers { Alice } characterizedBy {"Skill_Authentication_AC" = 5 "Experience_Authentication_AC" = 4}
+
+Expert_Authorization gathers { Alice Bob } characterizedBy {"Skill_Authorization_AC" = 4 "Experience_Authorization_AC" = 5}
+
+Advanced_Authentication gathers { Bob } characterizedBy {"Skill_Authentication_AC" = 4 "Experience_Authentication_AC" = 2}
+
+Advanced_Authorization gathers { David } characterizedBy {"Skill_Authorization_AC" = 3 "Experience_Authorization_AC" = 2}
+
+Beginner_Authentication gathers { Carlos David } characterizedBy {"Skill_Authentication_AC" = 2 "Experience_Authentication_AC" = 1}
+
+Beginner_Authorization gathers { Carlos } characterizedBy {"Skill_Authorization_AC" = 1 "Experience_Authorization_AC" = 1}
+

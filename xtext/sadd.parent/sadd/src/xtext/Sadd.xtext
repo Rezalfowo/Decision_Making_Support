@@ -1,0 +1,45 @@
+grammar xtext.Sadd with org.eclipse.xtext.common.Terminals
+
+generate sadd "http://www.Sadd.xtext"
+
+import "http://www.Teamprofile.xtext" as TP
+
+Model:
+	imports+=Import*
+	projcatsadd=ProjCatSADD
+;
+
+Import:
+	'import' importURI=STRING
+;
+
+ProjCatSADD :
+	Project | Category | SecurityADD
+;
+
+Category :
+	"Category" name=ID "{" secadd+=[SecurityADD|QualifiedName]* "}"
+;
+
+Project :
+	"Project" name=ID  "hasTP" teamprofiles+=[TP::Profile]+ "{" 
+	secadd+=SecurityADD*
+	category+=Category*"}"
+;
+
+	
+SecurityADD:
+	'SecurityADD' name=ID 
+	alts=Alternatives
+;
+Alternatives:
+	'alternatives' "{" alternatives+=Alternative+ "}" | "selectedAlternatives" "{" ("-" selectedalternatives+=[Alternative|QualifiedName])+ "}"
+;
+Alternative:
+	"-" name=ID "("solutions+=STRING+")"
+;
+
+QualifiedName:
+	ID ('.' ID)*;
+	
+	

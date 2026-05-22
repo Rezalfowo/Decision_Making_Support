@@ -1,0 +1,14 @@
+import "scada_authentication.sadd"
+import "scada_authorization.sadd"
+import "scada.teamprofile"
+
+Project SCADA hasTP Advanced_Authentication Advanced_Authorization Beginner_Authentication Beginner_Authorization Expert_Authentication Expert_Authorization{ 
+	Category CategoryAuthenticationActiveComponent {
+		SADDAuthentication 
+	}
+	Category CategoryAuthorizationActiveComponent {
+		SADDAuthorization
+	}
+	
+}
+

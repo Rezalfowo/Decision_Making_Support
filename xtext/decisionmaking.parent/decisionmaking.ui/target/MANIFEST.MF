@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: decisionmaking.ui
+Bundle-ManifestVersion: 2
+Bundle-Name: decisionmaking.ui
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.202605200912
+Bundle-SymbolicName: decisionmaking.ui; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: decisionmaking,decisionmaking.ide,org.eclipse.xtext.ui,o
+ rg.eclipse.xtext.ui.shared,org.eclipse.xtext.ui.codetemplates.ui,org.ec
+ lipse.ui.editors;bundle-version="3.14.300",org.eclipse.ui.ide;bundle-ve
+ rsion="3.18.500",org.eclipse.ui,org.eclipse.compare,org.eclipse.xtext.b
+ uilder
+Import-Package: org.apache.log4j
+Export-Package: xtext.ui.quickfix,decisionmaking.ui.internal,xtext.ui.co
+ ntentassist
+Bundle-Activator: decisionmaking.ui.internal.DecisionmakingActivator
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=21))"
+

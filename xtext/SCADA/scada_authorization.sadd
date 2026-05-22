@@ -1,0 +1,10 @@
+
+SecurityADD SADDAuthorization
+	alternatives {
+		- Conceptual_Authorization ( "Authorization")
+		- RBAC ("RoleBasedAccessControl")
+		- ABAC ("AttributeBasedAccessControl")
+		- RBAC_ABAC ("AttributeBasedAccessControl" "RoleBasedAccessControl")
+		
+		}
+
